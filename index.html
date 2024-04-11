@@ -22,28 +22,77 @@
 
 
 <body>
-  <header>Purr Mate:  Find Your Purrfect Cat!</header>
-<nav>
-  <ul>
-    <li>
-      <a href="./html/fave.html">
-        favorites
-      </a>
-    </li>
-  </ul>
+  <header>Purr Mate  Find Your Purrfect Cat!</header>
 
+  <!-- some sytlying such as pushing to the left of the page and chaing font size and color, mayble a border or something aorund them ? -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./html/fave.html"> favorites 😻</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="html/results.html">You results</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">giggle</a>
+      </ul>
+    </div>
+  </div>
 </nav>
+
+
+<!-- fix form and connect to JS -->
+
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Default checkbox
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Checked checkbox
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Default radio
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        Default checked radio
+      </label>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
   <!-- Your code goes here!!  -->
 
-  <h2>What's up team</h2>
-  <h3>no LOREM for this guy</h3>
-  <h3>Go Team!!!!</h3>
-
-
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium ducimus quae explicabo excepturi vitae
-    possimus iure hic, voluptatibus quibusdam alias consequatur consectetur dignissimos fugiat necessitatibus minus unde
-    quos sapiente?</p>
-
+  <!-- some syting to get to the bottom and centered -->
+<footer>
+  <h4>Made With Love 💕 and Cat Hair</h4>
+</footer>
   <!-- jquery and Bootstrap JS script tags  -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
