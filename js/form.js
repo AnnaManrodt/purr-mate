@@ -14,7 +14,7 @@ save data in an user object, in the obejct eadch anwser should be its own popert
     location: string text,  in terms of zipcode (if statement giving and error if this is not a number part of valditon)
     age: string/text, 
     gender: string, male, female. if idk is picked igngore this part 
-   }
+}
     then the needLevel related to the api if the cat has special needs 
 TO DO: save input to local storage
 
