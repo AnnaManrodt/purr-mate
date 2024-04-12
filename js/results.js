@@ -16,11 +16,7 @@ TO DO: dynamtically display each pet with stying and information,
       color: text
       img: url, text 
       discr: text
-      contact = {
-        address: text
-        phoneNum: int
-        email: text
-      }
+      addr_city: text 
       disabilty: boolean
 
     }
