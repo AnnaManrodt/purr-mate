@@ -1,5 +1,7 @@
 /*
 TO DO: reterive infomration form form page make sure to be able to gather data from radio, check boxes, text input and make sure form in valid
+*/
+/*
 make sure to validtate location text 
 TO DO: add event listener for sumbit button to save data, event listener should also redirect the user to the results page 
 
