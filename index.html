@@ -91,38 +91,38 @@ what age group are you looking for? baby young adult senior -->
 
 
 <div class="container">
-  <form>
+  <form class="ourForm">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <label for="exampleInputPassword1" class="form-label" >Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" required>
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
 
     <div class="mb-3 form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
       <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
     </div>
     <div class="mb-3 form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked required>
       <label class="form-check-label" for="flexCheckChecked">Checked checkbox</label>
     </div>
     <div class="mb-3 form-check">
       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-      <label class="form-check-label" for="flexRadioDefault1">Default radio</label>
+      <label class="form-check-label" for="flexRadioDefault1" required>Default radio</label>
     </div>
     <div class="mb-3 form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked required>
       <label class="form-check-label" for="flexRadioDefault2">Default checked radio</label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
   </form>
 </div>
 
@@ -141,7 +141,7 @@ what age group are you looking for? baby young adult senior -->
     crossorigin="anonymous"></script>
 
   <!-- Your own JS script tags go here  -->
-  <script src="js/main.js"></script>
+  <script src="../purr-mate/js/form.js"></script>
 </body>
 
 </html>
