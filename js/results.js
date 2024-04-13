@@ -45,7 +45,9 @@ TO DO: dynamtically display each pet with stying and information,
 // Dummy Data
 ////////////
 
+// Need to remove this once the form js is saving the userInfo to the localstorage
 // Setup for userInfo to mock the user saving their prefs to localStorage
+// Temporary file, don't forget to remove 
 let userInfoData = {
 	special_needs: 0,
 	color: 46,
@@ -103,12 +105,12 @@ for (let i = 0; i < catResults.length; i++) {
 
 const rowDivElement = $(`<div class="row text-left border">`)
 const firstRowDivElement = $(`<div class="row">`);
-const nameDivElement = $(`<div class="col-md mb-3">Name: ${catResults[i].pet_name}</div>`);
-const genderDivElement = $(`<div class="col-md mb-3">Gender: ${catResults[i].sex}</div>`);
-const breedDivElement = $(`<div class="col-md mb-3">Breed: ${catResults[i].primary_breed}</>`);
+const nameDivElement = $(`<div class="col-4 mb-3">Name: ${catResults[i].pet_name}</div>`);
+const genderDivElement = $(`<div class="col-4 mb-3">Gender: ${catResults[i].sex}</div>`);
+const breedDivElement = $(`<div class="col-4 mb-3">Breed: ${catResults[i].primary_breed}</>`);
 const secondRowDivElement = $(`<div class="row">`);
-const imageDivElement = $(`<div class="col-md mb-3">Image: ${catResults[i].large_results_photo_url}</div>`);
-const locationDivElement = $(`<div class="col-md mb-3">Location: ${catResults[i].addr_city}, ${catResults[i].addr_state_code}</div>`);
+const imageDivElement = $(`<div class="col-8 mb-3">Image: ${catResults[i].large_results_photo_url}</div>`);
+const locationDivElement = $(`<div class="col-4 mb-3">Location: ${catResults[i].addr_city}, ${catResults[i].addr_state_code}</div>`);
 
 
 // Appending them back to the HTML to the results div element
