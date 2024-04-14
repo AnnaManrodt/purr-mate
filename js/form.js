@@ -18,15 +18,18 @@ $('form').submit(function(event){
   }
   else {
     let  userInfoData = { 
-      email: $("#exampleInputEmail1"),
+      email: $("#email").val(),
       specialNeeds: $("#special_needs").val(),
       color: $("#color").val(),
       hair: $("#furType").val(),
       geoRange: $("#geoRange").val(),
       location: $("#zipCode").val(),
       age: $("#age").val(), 
-      gender: $("#age").val() ,
+      gender: $("#gender").val(),
       };
+
+      console.log('email:', $("email").val());
+
   localStorage.setItem('userInfo', JSON.stringify(userInfoData));
   window.location.href = "./html/results.html"
 }
