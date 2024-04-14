@@ -1,4 +1,6 @@
 let catFactsUrl = 'https://cat-fact.herokuapp.com/facts';
+
+
 const jokesDiv = $('.jokes');
 
 fetch(catFactsUrl)
@@ -18,4 +20,3 @@ fetch(catFactsUrl)
   }
 
 })
-

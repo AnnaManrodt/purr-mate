@@ -23,8 +23,8 @@ $('form').submit(function(event){
       color: $("#color").val(),
       hair: $("#furType").val(),
       geoRange: $("#geoRange").val(),
-      location: $("#location").val(),
-      age: $("#furType").val(),
+      location: $("#zipCode").val(),
+      age: $("#age").val(), 
       gender: $("#age").val() ,
       };
   localStorage.setItem('userInfo', JSON.stringify(userInfoData));
@@ -33,7 +33,7 @@ $('form').submit(function(event){
   // doesnt work yet
   }) 
 })
-
+//transation for string 
 // })
 
 // submit.addEventListener('click', function(event){
