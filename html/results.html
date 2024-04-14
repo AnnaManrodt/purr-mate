@@ -24,6 +24,7 @@
 </head>
 
 <body>
+<!--STYLING:  these were just for formating the html. Can be incorporated into the CSS or replaced by the CSS-->
   <style>
     .headerNavContainer {
       padding: 10px;
@@ -43,8 +44,26 @@
 
     .footer {
       text-align: center;
+      position: fixed; /* or position: absolute; */
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #A7C4A0;
+      color: darkolivegreen;
+      padding: 10px 0;
     }
-  </style>
+
+    /* Styles for footer */
+    .footer {
+
+    }
+    
+    /* Styles to push content above the footer */
+    body {
+      margin-bottom: 60px; /* Adjust height based on footer's height */
+    }
+   </style>
+   
   <div class="headerNavContainer">
     <header>
       <h1>Purr Mate</h1> <br>
