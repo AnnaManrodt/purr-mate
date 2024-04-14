@@ -1,5 +1,6 @@
 /*
-TO DO: reterive infomration form form page make sure to be able to gather data from radio, check boxes, text input and make sure form in valid
+TO DO: retrieve information form from page.  Make sure that is able to gather data from:  radio, check boxes, text input and form is valid
+
 */
 // const submit = $("#submit");
 
@@ -7,31 +8,31 @@ TO DO: reterive infomration form form page make sure to be able to gather data f
 
 const form = $(".ourForm")
 
-$(document).ready(function(){
-$('form').submit(function(event){
-  event.preventDefault(); 
-  if (!form[0].checkValidity()){
-    console.log("form invalid");
-    form.querySelectorAll("input").forEach(i=>{
-      i.classList.add("invalid");
-    });
-  }
-  else {
-    let  userInfoData = { 
-      email: $("#exampleInputEmail1"),
-      specialNeeds: $("#special_needs").val(),
-      color: $("#color").val(),
-      hair: $("#furType").val(),
-      geoRange: $("#geoRange").val(),
-      location: $("#zipCode").val(),
-      age: $("#age").val(), 
-      gender: $("#age").val() ,
+$(document).ready(function () {
+  $('form').submit(function (event) {
+    event.preventDefault();
+    if (!form[0].checkValidity()) {
+      console.log("form invalid");
+      form.querySelectorAll("input").forEach(i => {
+        i.classList.add("invalid");
+      });
+    }
+    else {
+      let userInfoData = {
+        email: $("#exampleInputEmail1"),
+        specialNeeds: $("#special_needs").val(),
+        color: $("#color").val(),
+        hair: $("#furType").val(),
+        geoRange: $("#geoRange").val(),
+        location: $("#zipCode").val(),
+        age: $("#age").val(),
+        gender: $("#age").val(),
       };
-  localStorage.setItem('userInfo', JSON.stringify(userInfoData));
-  window.location.href = "./html/results.html"
-}
-  // doesnt work yet
-  }) 
+      localStorage.setItem('userInfo', JSON.stringify(userInfoData));
+      window.location.href = "./html/results.html"
+    }
+    // doesnt work yet
+  })
 })
 //transation for string 
 // })
