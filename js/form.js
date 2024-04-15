@@ -34,6 +34,8 @@ $('form').submit(function(event){
 //transation for string 
 // })
 
+//zip code form validation if statement 
+
 // submit.addEventListener('click', function(event){
 //   if (form.checkValidity() === false){
 //     console.log("form invalid");
