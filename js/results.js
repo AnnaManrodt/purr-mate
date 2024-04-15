@@ -27,11 +27,11 @@ let favResults = {
   
 }
 
-TO DO: dynamtically display this object, 
-TO DO: style this guy with bootstrap good luck! (dont forget the save button)
-TO DO: use th api to limit results too display 2 pages 
+XX-TO DO: dynamtically display this object, 
+XX-TO DO: style this guy with bootstrap good luck! (dont forget the save button)
+XX-TO DO: use th api to limit results too display 2 pages 
 
-TO DO: save button, add event listener to a button that look like a heart or paw print or if htat to hard just text
+XX-TO DO: save button, add event listener to a button that look like a heart or paw print or if htat to hard just text
 when the button is pressed it should store that animal into local storage as a sperate thing from userInfo, mayeb store as favResults
 clicking favs should  NOT bring you to th favs page!!!!!
 
