@@ -1,5 +1,6 @@
 /*
-TO DO: reterive infomration form form page make sure to be able to gather data from radio, check boxes, text input and make sure form in valid
+TO DO: retrieve information form from page.  Make sure that is able to gather data from:  radio, check boxes, text input and form is valid
+
 */
 // const submit = $("#submit");
 
