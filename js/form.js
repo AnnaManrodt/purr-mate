@@ -24,8 +24,15 @@ $('form').submit(function(event){
       gender: $("#gender").val(),
       };
 
+      function specialNeedsTranslation(special_needs){
+        const special_needsTranslationObject = {
+        "yes" : 1,
+        "No" : 0
+        }
+      }
+
       function getColorFromNumber(color) {
-        const catColor = {
+        const catColorObject = {
           "Black" : 46,
           "Black & White or Tuxedo" : 47,
           "Brown or Chocolate" : 48,
@@ -35,8 +42,15 @@ $('form').submit(function(event){
         }   
       }
 
+      function furTypeTranslation(furType){
+        const furTypeTranslationObject = {
+            "Yes" : 1,
+            "No" : 0
+        }
+      } 
+
       function geoRangeTranslation(geoRange){
-        const geo_rangeInMiles = {
+        const geo_rangeObjects = {
           "less than 35 miles" : 35,
           "Less than 50 miles" : 50,
           "Less than 75 miles" : 75,
@@ -44,10 +58,28 @@ $('form').submit(function(event){
           "Less than 250 miles" : 250
         }
       }
+
+      function ageTranslation(age){
+        const ageTranslationObject = {
+        "Kitten" : kitten,
+        "Young" : young,
+        "Adult" : adult,
+        "Senior" : senior
+        }
+      }
+
+      function genderTranslation(gender){
+        const genderTranslationArray = {
+        "Female" : f,
+        "Male" : m,
+        "I don't care, as long as they are a cat!" : null 
+        }
+      }
+
   localStorage.setItem('userInfo', JSON.stringify(userInfoData));
   window.location.href = "./html/results.html"
 }
-  // doesnt work yet
+  // doesnt work yeta
   }) 
 })
 //transation for string 
