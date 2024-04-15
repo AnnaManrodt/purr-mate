@@ -48,17 +48,17 @@ TO DO: dynamtically display each pet with stying and information,
 // Need to remove this once the form js is saving the userInfo to the localstorage
 // Setup for userInfo to mock the user saving their prefs to localStorage
 // Temporary file, don't forget to remove 
-let userInfoData = {
-	special_needs: 0,
-	color: 46,
-	hair: 'medium',
-	geo_range: 50,
-	zip: 55449,
-	age: 'young',
-	sex: 'm'
-}
+// let userInfoData = {
+// 	special_needs: 0,
+// 	color: 46,
+// 	hair: 'medium',
+// 	geo_range: 50,
+// 	zip: 55449,
+// 	age: 'young',
+// 	sex: 'm'
+// }
 
-localStorage.setItem('userInfo', JSON.stringify(userInfoData));
+// localStorage.setItem('userInfo', JSON.stringify(userInfoData));
 
 /////////////
 // Execute Code Flow

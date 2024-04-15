@@ -1,10 +1,4 @@
-/*
-TO DO: retrieve information form from page.  Make sure that is able to gather data from:  radio, check boxes, text input and form is valid
 
-*/
-// const submit = $("#submit");
-
-// $("submit").on("click", function(){
 
 const form = $(".ourForm")
 
