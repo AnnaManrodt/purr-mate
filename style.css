@@ -11,17 +11,47 @@ header {
   font-style: normal;
 }
 
-h1{
-margin: 1%;
+.headerNavContainer {
+  padding: 10px;
+  text-align: center;
+
+}
+
+h1 {
+  font-size: 36px;
+  color: darkolivegreen;
 }
 
 .link {
   text-decoration: none;
 }
-.footer {
-  text-align: center;
+
+h5 {
+  font-size: 18px;
+  color: rgb(21, 31, 3)
 }
+
+footer {
+    position: fixed;
+    /* or position: absolute; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #A7C4A0;
+    color: darkolivegreen;
+    text-align: center;
+    padding: 10px 0;
+    }
 
 .catName {
   font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 18px;
+  color: rgb(21, 31, 3)
+}
+
+.footer {
+  text-align: center;
 }
