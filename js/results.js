@@ -66,6 +66,8 @@ localStorage.setItem('userInfo', JSON.stringify(userInfoData));
 
 // Get the userInfo
 const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+console.log(userInfo);
+
 
 // Query the API for matches for our cat
 const apiUrl = `https://api-staging.adoptapet.com/search/pet_search?key=hg4nsv85lppeoqqixy3tnlt3k8lj6o0c&v=3&output=json&city_or_zip=${userInfo.location}&geo_range=${userInfo.geoRange}&species=cat&sex=${userInfo.gender}&age=${userInfo.age}&color_id=${userInfo.color}&pet_size_range_id=2&hair=${userInfo.hair}&bonded_pair=&special_needs=${userInfo.specialNeeds}&include_mixes=&added_after=&start_number=1&end_number=30&meta_only=0`
