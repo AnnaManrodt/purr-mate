@@ -111,15 +111,20 @@
 what age group are you looking for? baby young adult senior -->
 
 
-  <form class="ourForm">
+  <form class="form-group">
     <label for="exampleInputEmail1">Email address:</label><br>
     <input type="email" id="email" name="email" required><br>
 
-    <label for="special_needs">It takes a special human to love me! Are you okay with me being needy? </label><br>
-    <input type="radio" id="yes" name="special_needs" value="special_needs" required> Yes<br>
-    <input type="radio" id="special_needs" name="special_needs" value="special_needs" required> No<br>
+ <div class="form-group">
+      <label for="special_needs">Needy cat preference:</label>
+      <select class="form-control" id="special_needs" name="special_needs" required>
+        <option selected>Choose...</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
 
-    <label for="color">Color preference?</label><br>
+    <label for="color">Color preference:</label><br>
     <!--Form Group:  Options listed -->
     <div class="form-group">
       <select class="form-control" id="color">
@@ -127,15 +132,21 @@ what age group are you looking for? baby young adult senior -->
         <option>Black & White or Tuxedo</option>
         <option>Black</option>
         <option>Brown or Chocolate</option>
-        <option>Gray</option>
+        <option>Tan or Fawn</option>
         <option>Orange or Red</option>
         <option>Spotted Tabby/Leopard Spotted</option>
       </select>
     </div>
 
-    <label for="furType">Do you like a clean house? Some of us are hairy!</label><br>
-    <input type="radio" id="furType" name="hair" value="furType" required> Yes<br>
-    <input type="radio" id="furType" name="hair" value="furType" required> No<br>
+
+    <div class="form-group">
+      <label for="furType">Clean house:</label>
+      <select class="form-control" id="furType" name="furType" required>
+        <option selected>Choose...</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
 
     <!--Form Group for georange - options listed-->
 
@@ -162,7 +173,7 @@ what age group are you looking for? baby young adult senior -->
       <!--Form Group Age - options listed-->
 
       <div class="form-group">
-        <label for="age">Age preference?</label>
+        <label for="age">Age preference:</label>
         <select class="form-control" id="age" name="age" required>
           <option selected>Choose...</option>
           <option>Young</option>
@@ -172,11 +183,15 @@ what age group are you looking for? baby young adult senior -->
         </select>
       </div>
 
+      <div class="form-group">
+        <label for="gender">Gender Preference:</label>
+        <select class="form-control" id="gender" name="gender" required>
+          <option selected>Choose...</option>
+          <option>Female</option>
+          <option>Male</option>
+        </select>
+      </div>
 
-
-      <label for="gender">Preferred gender</label><br>
-      <input type="radio" id="male" name="gender" value="male" required> Male<br>
-      <input type="radio" id="female" name="gender" value="female" required> Female<br>
 
       <button type="submit" class="btn btn-primary" id="submit">Submit</button>
   </form>
