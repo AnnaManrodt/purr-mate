@@ -75,11 +75,11 @@ $('form').submit(function(event){
         "I don't care, as long as they are a cat!" : null 
         }
       }
-      
+
   localStorage.setItem('userInfo', JSON.stringify(userInfoData));
   window.location.href = "./html/results.html"
 }
-  // doesnt work yet
+  // doesnt work yeta
   }) 
 })
 //transation for string 
