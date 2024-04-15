@@ -111,35 +111,89 @@
 what age group are you looking for? baby young adult senior -->
 
 
-  <form class="ourForm">
+  <form class="form-group">
     <label for="exampleInputEmail1">Email address:</label><br>
     <input type="email" id="email" name="email" required><br>
 
-    <label for="special_needs">It takes a special human to love me!  Are you okay with me being needy?  </label><br>
-    <input type="radio" id="yes" name="special_needs" value="special_needs" required> Yes<br>
-    <input type="radio" id="special_needs" name="special_needs" value="special_needs" required> No<br>
+<div class="form-group">
+      <label for="special_needs">Do you want a extra specail needy cat?</label>
+      <select class="form-control" id="special_needs" name="special_needs" required>
+        <option selected>Choose...</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
 
-    <label for="color">What color do you prefer?  I know, tough to choose, we're all purr cute!</label><br>
-    <input type="text" id="color" name="color" required><br>
+    <label for="color">What color kitty?</label><br>
+    <!--Form Group:  Options listed -->
+    <div class="form-group">
+      <select class="form-control" id="color" required>
+        <option selected>Choose...</option>
+        <option>Black & White or Tuxedo</option>
+        <option>Black</option>
+        <option>Brown or Chocolate</option>
+        <option>Tan or Fawn</option>
+        <option>Orange or Red</option>
+        <option>Spotted Tabby/Leopard Spotted</option>
+      </select>
+    </div>
 
-    <label for="furType">Do you like a clean house? Some of us come with a lot of hairrage</label><br>
-    <input type="radio" id="furType" name="hair" value="furType" required> Yes<br>
-    <input type="radio" id="furType" name="hair" value="furType" required> No<br>
 
-    <label for="geoRange">How far are you willing to travel for me?</label><br>
-    <input type="number" id="geoRange" name="geoRange" required><br>
+    <div class="form-group">
+      <label for="furType">Do you like a clean house?</label>
+      <select class="form-control" id="furType" name="furType" required>
+        <option selected>Choose...</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
 
-    <label for="zipCode">What is your zip code?</label><br>
-    <input type="number" id="zipCode" name="location" required><br>
+    <!--Form Group for georange - options listed-->
 
-    <label for="age">What is your age purrference?:</label><br>
-    <input type="number" id="age" name="age" required><br>
+    <div class="form-group">
+      <label for="geoRange">How far will you travel for me?</label>
+      <select class="form-control" id="geoRange" required> 
+        <option selected>Choose...</option>
+        <option>Less than 35 miles</option>
+        <option>Less than 50 miles</option>
+        <option>Less than 75 miles</option>
+        <option>Less than 100 miles</option>
+        <option>Less than 250 miles</option>
+      </select>
+    </div>
 
-    <label for="gender">What is your purrrferred cat gender</label><br>
-    <input type="radio" id="male" name="gender" value="male" required> Male<br>
-    <input type="radio" id="female" name="gender" value="female" required> Female<br>
+    <!--Form Needs Validation for zip code-->
+    <div class="col-md-3 mb-3 form-group">
+      <label for="zipCode">Enter your zip code</label>
+      <input type="number" class="form-control" id="zipCode" placeholder="Zip" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
 
-    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+      <!--Form Group Age - options listed-->
+
+      <div class="form-group">
+        <label for="age">What age group are you looking for?</label>
+        <select class="form-control" id="age" name="age" required>
+          <option selected>Choose...</option>
+          <option>Young</option>
+          <option>Adult</option>
+          <option>Senior</option>
+          <option>Kitten</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Girl or boy feline friend?</label>
+        <select class="form-control" id="gender" name="gender" required>
+          <option selected>Choose...</option>
+          <option>Female</option>
+          <option>Male</option>
+        </select>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary" id="submit">Submit</button>
   </form>
 
 </body>

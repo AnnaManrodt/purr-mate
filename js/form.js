@@ -1,6 +1,6 @@
 
 
-const form = $(".ourForm")
+const form = $(".form-group")
 
 $(document).ready(function(){
 $('form').submit(function(event){
@@ -11,6 +11,7 @@ $('form').submit(function(event){
       i.classList.add("invalid");
     });
   }
+
   else {
     let  userInfoData = { 
       email: $("#email").val(),
@@ -23,8 +24,26 @@ $('form').submit(function(event){
       gender: $("#gender").val(),
       };
 
-      console.log('email:', $("email").val());
+      function getColorFromNumber(color) {
+        const catColor = {
+          "Black" : 46,
+          "Black & White or Tuxedo" : 47,
+          "Brown or Chocolate" : 48,
+          "Orange or Red" : 54,
+          "Spotted Tabby/Leopard Spotted" : 56,
+          "Tan or Fawn" : 57 
+        }   
+      }
 
+      function geoRangeTranslation(geoRange){
+        const geo_rangeInMiles = {
+          "less than 35 miles" : 35,
+          "Less than 50 miles" : 50,
+          "Less than 75 miles" : 75,
+          "Less than 100 miles" : 100,
+          "Less than 250 miles" : 250
+        }
+      }
   localStorage.setItem('userInfo', JSON.stringify(userInfoData));
   window.location.href = "./html/results.html"
 }
