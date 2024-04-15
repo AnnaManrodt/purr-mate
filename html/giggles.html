@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,65 +11,78 @@
   <link rel="stylesheet" href="../style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kalam:wght@300;400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kalam:wght@300;400;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dekko&family=Kalam:wght@300;400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dekko&family=Kalam:wght@300;400;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
   <title>Giggles</title>
 </head>
+
 <body>
-  <div class="headerNavContainer">
-    <header><h1>Purr Mate</h1> <br>
-      <h5>Find Your Purrfect Cat!</h5>
+  <div id="pageContainer">
+    <div id="contentWrap">
+  <div class="headerNavContainer container-fluid">
+    <header class="row">
+      <a href="../index.html" class="col-2">
+        <img src="./image2 (1).jpeg" class="logoImg" alt="purr mate logo"></a>
+      <div class="col-3">
+        <h1>Purr Mate</h1> <br>
+        <h5>Find Your Purrfect Cat!</h5>
+      </div>
     </header>
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Home</a>
-                  </li>
-                <a class="nav-link active" aria-current="page" href="../html/save.html"> Favorites 😻</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../html/results.html">Your results</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../html/giggles.html">Giggles</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <a class="nav-link active" aria-current="page" href="../html/save.html"> Favorites 😻</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/results.html">Your results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/giggles.html">Giggles</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
   </div>
 
-    <main>
-      <div class="jokes">
-            <h3>Press the button to get a Random cat joke!</h3>
+  <main>
+    <div class="jokes">
+      <h3>Press the button to get a Random cat joke!</h3>
 
-          <div id="jokesGoHere">
-
-          </div>
-        <button type="button" class="btn btn-outline-secondary" id="catJokeButton">Cat Jokes!</button>
+      <div id="jokesGoHere">
 
       </div>
-    </main>
+      <button type="button" class="btn btn-outline-secondary" id="catJokeButton">Cat Jokes!</button>
 
-    <footer>
-      <h4>Made With Love 💕 and Cat Hair</h4>
-      <h6>&copy; 2024. </h6>
-    </footer>
+    </div>
+  </main>
+    </div>
+  <footer>
+    <h4>Made With Love 💕 and Cat Hair</h4>
+    <h6>&copy; 2024. </h6>
+  </footer>
+  </div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <!-- Your own JS script tags go here  -->
 <script src="../js/giggles.js"></script>
+
 </html>
