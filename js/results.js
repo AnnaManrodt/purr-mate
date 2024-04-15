@@ -118,7 +118,7 @@ resultsDivElement.on('click', (event) => {
       image: catResults[$(event.target).data('index')].large_results_photo_url,
       gender: catResults[$(event.target).data('index')].sex,
       age: catResults[$(event.target).data('index')].age,
-      resident: `${catResults[$(event.target).data('index')].addr_city}, ${catResults[$(event.target).data('index')]}`,
+      resident: `${catResults[$(event.target).data('index')].addr_city}, ${catResults[$(event.target).data('index')].addr_state_code}`,
       index: $(event.target).data('index')
     }
     
