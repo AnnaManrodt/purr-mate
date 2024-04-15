@@ -32,7 +32,8 @@
   <style>
     /* Styles for footer */
     footer {
-      position: fixed; /* or position: absolute; */
+      position: fixed;
+      /* or position: absolute; */
       left: 0;
       bottom: 0;
       width: 100%;
@@ -41,10 +42,11 @@
       text-align: center;
       padding: 10px 0;
     }
-    
+
     /* Styles to push content above the footer */
     body {
-      margin-bottom: 60px; /* Adjust height based on footer's height */
+      margin-bottom: 60px;
+      /* Adjust height based on footer's height */
     }
   </style>
 </head>
@@ -113,48 +115,70 @@ what age group are you looking for? baby young adult senior -->
     <label for="exampleInputEmail1">Email address:</label><br>
     <input type="email" id="email" name="email" required><br>
 
-    <label for="special_needs">It takes a special human to love me!  Are you okay with me being needy?  </label><br>
+    <label for="special_needs">It takes a special human to love me! Are you okay with me being needy? </label><br>
     <input type="radio" id="yes" name="special_needs" value="special_needs"> Yes<br>
     <input type="radio" id="special_needs" name="special_needs" value="special_needs"> No<br>
 
-    <label for="color">What color do you prefer?</label><br>
-<!--Form Group:  Options listed-->
-<div class="form-group">
-  <label for="color">Select Color from Menu</label>
-  <select class="form-control" id="color">
-    <option>Black & White or Tuxedo</option>
-    <option>Black</option>
-    <option>Brown or Chocolate</option>
-    <option>Gray</option>
-    <option>Orange or Red</option>
-    <option>Spotted Tabby/Leopard Spotted</option>
-  </select>
-</div>
+    <label for="color">Color preference?</label><br>
+    <!--Form Group:  Options listed -->
+    <div class="form-group">
+      <select class="form-control" id="color">
+        <option selected>Choose...</option>
+        <option>Black & White or Tuxedo</option>
+        <option>Black</option>
+        <option>Brown or Chocolate</option>
+        <option>Gray</option>
+        <option>Orange or Red</option>
+        <option>Spotted Tabby/Leopard Spotted</option>
+      </select>
+    </div>
 
-
-
-
-    <label for="furType">Do you like a clean house? Some of us come with a lot of hairrage</label><br>
+    <label for="furType">Do you like a clean house? Some of us are hairy!</label><br>
     <input type="radio" id="furType" name="hair" value="furType"> Yes<br>
     <input type="radio" id="furType" name="hair" value="furType"> No<br>
 
-    <label for="geoRange">How far are you willing to travel for me?</label><br>
-    <input type="radio" id="geoRange" name="geoRange"><br>
+    <!--Form Group for georange - options listed-->
 
-    <label for="zipCode">What is your zip code?</label><br>
-    <input type="number" id="zipCode" name="location"><br>
+    <div class="form-group">
+      <label for="geoRange">How far will you travel for me?</label>
+      <select class="form-control" id="geoRange">
+        <option selected>Choose...</option>
+        <option>Less than 35 miles</option>
+        <option>Less than 50 miles</option>
+        <option>Less than 75 miles</option>
+        <option>Less than 100 miles</option>
+        <option>Less than 250 miles</option>
+      </select>
+    </div>
 
-    <label for="age">What is your age purrference?:</label><br>
-    <input type="radio" id="age" name="age"><br>
+    <!--Form Needs Validation for zip code-->
+    <div class="col-md-3 mb-3">
+      <label for="zipCode">Enter your zip code</label>
+      <input type="number" class="form-control" id="zipCode" placeholder="Zip" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+      <!--Form Group Age - options listed-->
 
-    <label for="gender">What is your purrrferred cat gender</label><br>
-    <input type="radio" id="male" name="gender" value="male"> Male<br>
-    <input type="radio" id="female" name="gender" value="female"> Female<br>
+      <div class="form-group">
+        <label for="age">Age preference?</label>
+        <select class="form-control" id="age">
+          <option selected>Choose...</option>
+          <option>Young</option>
+          <option>Adult</option>
+          <option>Senior</option>
+          <option>Kitten</option>
+        </select>
+      </div>
 
-    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+      <label for="gender">Preferred gender</label><br>
+      <input type="radio" id="male" name="gender" value="male"> Male<br>
+      <input type="radio" id="female" name="gender" value="female"> Female<br>
+
+      <button type="submit" class="btn btn-primary" id="submit">Submit</button>
   </form>
 
-  
+
 </body>
 
 </html>
