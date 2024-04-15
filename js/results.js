@@ -118,30 +118,33 @@ resultsDivElement.on('click', (event) => {
       image: catResults[$(event.target).data('index')].large_results_photo_url,
       gender: catResults[$(event.target).data('index')].sex,
       age: catResults[$(event.target).data('index')].age,
+      resident: `${catResults[$(event.target).data('index')].addr_city}, ${catResults[$(event.target).data('index')]}`,
       index: $(event.target).data('index')
     }
-  }
-  
-  // generate the list of favorite cats
-  // check to see if there is an existing array with favorite cats.  If not then create a new array.
-  let favoriteCats = JSON.parse(localStorage.getItem('favoriteCats'));
-  
-  if (favoriteCats) {
-    // Checking if the favorit cat already exists because we don't want to add another one of the same one to the list
-    if ( !favoriteCats.find( (cat) => {
-      return JSON.stringify(cat) === JSON.stringify(favoriteCat);
-    })) {
-      // Add to favorite list
-      favoriteCats.push(favoriteCat);  
-      
-      // Show the favorite list icon for selected cats
+    
+    
+    // generate the list of favorite cats
+    // check to see if there is an existing array with favorite cats.  If not then create a new array.
+    let favoriteCats = JSON.parse(localStorage.getItem('favoriteCats'));
+    
+    if (favoriteCats) {
+      // Checking if the favorit cat already exists because we don't want to add another one of the same one to the list
+      if ( !favoriteCats.find( (cat) => {
+        return JSON.stringify(cat) === JSON.stringify(favoriteCat);
+      })) {
+        // Add to favorite list
+        favoriteCats.push(favoriteCat);  
+        
+        // Show the favorite list icon for selected cats
+        $(event.target).siblings('span').removeAttr('hidden');
+        localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
+      }
+    } else {
+      favoriteCats = [favoriteCat];
+      localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
       $(event.target).siblings('span').removeAttr('hidden');
     }
-  } else {
-    favoriteCats = [favoriteCat];
-    $(event.target).siblings('span').removeAttr('hidden');
   }
-  localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
 })
 
 
