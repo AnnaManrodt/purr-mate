@@ -190,6 +190,6 @@ function generateMatchRows(catResults) {
     divContainerElement.append(rowDivElement);
     resultsDivElement.append(divContainerElement);
   }
-  
+
   
 }
