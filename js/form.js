@@ -11,18 +11,22 @@ $('form').submit(function(event){
       i.classList.add("invalid");
     });
   }
+  let translatedNeeds = specialNeedsTranslation();
+
 
   else {
     let  userInfoData = { 
       email: $("#email").val(),
-      specialNeeds: $("#special_needs").val(),
+      specialNeeds: translatedNeeds,
       color: $("#color").val(),
       hair: $("#furType").val(),
       geoRange: $("#geoRange").val(),
       location: $("#zipCode").val(),
       age: $("#age").val(), 
       gender: $("#gender").val(),
+
       };
+
 
       function specialNeedsTranslation(special_needs){
         const special_needsTranslationObject = {
@@ -76,6 +80,7 @@ $('form').submit(function(event){
         }
       }
 
+      
   localStorage.setItem('userInfo', JSON.stringify(userInfoData));
   window.location.href = "./html/results.html"
 }

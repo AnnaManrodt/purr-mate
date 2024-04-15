@@ -77,7 +77,7 @@ function getRandomCatJoke() {
 
 $(document).ready(function(){
   $('#catJokeButton').on('click', function(){
-      let catJokeDiv = $("<div>");
+      let catJokeDiv = $(`<div class="jokeButton">`);
       catJokeDiv.text(getRandomCatJoke());
       $('#jokesGoHere').append(catJokeDiv);
   });
