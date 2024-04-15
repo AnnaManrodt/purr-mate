@@ -8,31 +8,34 @@ TO DO: retrieve information form from page.  Make sure that is able to gather da
 
 const form = $(".ourForm")
 
-$(document).ready(function () {
-  $('form').submit(function (event) {
-    event.preventDefault();
-    if (!form[0].checkValidity()) {
-      console.log("form invalid");
-      form.querySelectorAll("input").forEach(i => {
-        i.classList.add("invalid");
-      });
-    }
-    else {
-      let userInfoData = {
-        email: $("#exampleInputEmail1"),
-        specialNeeds: $("#special_needs").val(),
-        color: $("#color").val(),
-        hair: $("#furType").val(),
-        geoRange: $("#geoRange").val(),
-        location: $("#zipCode").val(),
-        age: $("#age").val(),
-        gender: $("#age").val(),
+$(document).ready(function(){
+$('form').submit(function(event){
+  event.preventDefault(); 
+  if (!form[0].checkValidity()){
+    console.log("form invalid");
+    form.querySelectorAll("input").forEach(i=>{
+      i.classList.add("invalid");
+    });
+  }
+  else {
+    let  userInfoData = { 
+      email: $("#email").val(),
+      specialNeeds: $("#special_needs").val(),
+      color: $("#color").val(),
+      hair: $("#furType").val(),
+      geoRange: $("#geoRange").val(),
+      location: $("#zipCode").val(),
+      age: $("#age").val(), 
+      gender: $("#gender").val(),
       };
-      localStorage.setItem('userInfo', JSON.stringify(userInfoData));
-      window.location.href = "./html/results.html"
-    }
-    // doesnt work yet
-  })
+
+      console.log('email:', $("email").val());
+
+  localStorage.setItem('userInfo', JSON.stringify(userInfoData));
+  window.location.href = "./html/results.html"
+}
+  // doesnt work yet
+  }) 
 })
 //transation for string 
 // })
