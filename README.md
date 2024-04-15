@@ -14,7 +14,7 @@ Purr-Mate is a website where user can go to find a cat "mate" based on results f
 ## Group Colaboration:
 
 
-## Lessons Learned
+## Tech Stack
 
 
 ## Screenshot
