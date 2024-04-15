@@ -20,7 +20,7 @@ have a default message of no cats saved yet
 import React, { useState } from 'save.html';
 
 const ItemList = () => {
-  const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);
+  const [items, setItems] = useState(['catResults');
 
   const handleDelete = (index) => {
     const updatedItems = items.filter((item, i) => i !== index);
@@ -29,7 +29,7 @@ const ItemList = () => {
 
   return (
     <div>
-      <h1>Item List</h1>
+      <h1>favorit</h1>
       <ul>
         {items.map((item, index) => (
           <li key={index}>
@@ -42,7 +42,7 @@ const ItemList = () => {
   );
 };
 
-
+export default ItemList;
 
 
 
@@ -57,8 +57,6 @@ figure out how to save rating in local storage
 /*
 once cat is deleted remove it from local storage and then resave list of save cats 
 import React, { useState, useEffect } from 'react';*/
-
-
 
 const ItemList = () => {
   const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);
@@ -76,7 +74,7 @@ const ItemList = () => {
   };
   return (
     <div>
-      <h1>saved</h1>
+      <h1>Item List</h1>
       <ul>
         {items.map((item, index) => (
           <li key={index}>
