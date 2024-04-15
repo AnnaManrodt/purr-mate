@@ -1,5 +1,52 @@
+
+
+const form = $(".ourForm")
+
+$(document).ready(function(){
+$('form').submit(function(event){
+  event.preventDefault(); 
+  if (!form[0].checkValidity()){
+    console.log("form invalid");
+    form.querySelectorAll("input").forEach(i=>{
+      i.classList.add("invalid");
+    });
+  }
+  else {
+    let  userInfoData = { 
+      email: $("#email").val(),
+      specialNeeds: $("#special_needs").val(),
+      color: $("#color").val(),
+      hair: $("#furType").val(),
+      geoRange: $("#geoRange").val(),
+      location: $("#zipCode").val(),
+      age: $("#age").val(), 
+      gender: $("#gender").val(),
+      };
+
+      console.log('email:', $("email").val());
+
+  localStorage.setItem('userInfo', JSON.stringify(userInfoData));
+  window.location.href = "./html/results.html"
+}
+  // doesnt work yet
+  }) 
+})
+//transation for string 
+// })
+
+//zip code form validation if statement 
+
+// submit.addEventListener('click', function(event){
+//   if (form.checkValidity() === false){
+//     console.log("form invalid");
+//     form.querySelectorAll("input").forEach(i=>{
+//       i.classList.add("invalid");
+//     });
+//   }
+
+
+
 /*
-TO DO: reterive infomration form form page make sure to be able to gather data from radio, check boxes, text input and make sure form in valid
 make sure to validtate location text 
 TO DO: add event listener for sumbit button to save data, event listener should also redirect the user to the results page 
 
@@ -17,6 +64,4 @@ save data in an user object, in the obejct eadch anwser should be its own popert
 }
     then the needLevel related to the api if the cat has special needs 
 TO DO: save input to local storage
-
-
 */
