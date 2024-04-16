@@ -51,6 +51,9 @@ footer {
     text-align: center; /* optional */
     position: absolute;
     }
+    .footer {
+      margin-bottom: 60px; /* Adjust this value to match the height of your footer */
+  }
 
 .catName {
   font-size: 1.5rem;
@@ -65,6 +68,17 @@ footer {
   max-width: 8%;
   margin-right: 100%;
   border-radius: 50px;
+}
+
+.centered-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vh; /* Adjust this value to control the vertical position */
+  font-size: 30px;
+}
+.centered-text {
+  text-align: center;
 }
 
 /* footer needs work */

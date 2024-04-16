@@ -1,4 +1,5 @@
 function generateMatchRows(savedCats) {
+  console.log('savedCats:', savedCats); // Log the value of savedCats
   // Your existing code for generating rows goes here
   const resultsDivElement = $('.dataContainer');
     
