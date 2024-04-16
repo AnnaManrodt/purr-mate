@@ -5,6 +5,7 @@ body{
     font-style: normal;
     position: relative;
     min-height: 100vh;
+    padding-bottom: 60px;
 }
 #page-container{
   position: relative;
@@ -42,7 +43,8 @@ h1 {
 }
 
 footer {
-    /* or position: absolute; */
+  
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -50,13 +52,8 @@ footer {
     background-color: #A7C4A0;
     color: darkolivegreen;
     text-align: center;
-    text-align: center; /* optional */
-    padding: 30px 0;
-    position: fixed;
-    }
-    .footer {
-      margin-bottom: 60px; /* Adjust this value to match the height of your footer */
-  }
+    padding: 10px 0; /* optional */
+}
 
 .catName {
   font-size: 1.5rem;
