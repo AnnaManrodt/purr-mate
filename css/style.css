@@ -1,20 +1,22 @@
-body{
+body {
   background-color: #E6EFE9;
-    font-family: "Dekko", cursive;
-    font-weight: 300;
-    font-style: normal;
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 60px;
+  font-family: "Dekko", cursive;
+  font-weight: 300;
+  font-style: normal;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px;
 }
-#page-container{
+
+#page-container {
   position: relative;
   min-height: 100vh;
 }
 
-#contentWrap{
-  padding-bottom: 2.5rem 
+#contentWrap {
+  padding-bottom: 2.5rem
 }
+
 header {
   font-family: "Architects Daughter", cursive;
   font-weight: 400;
@@ -30,8 +32,8 @@ header {
   text-align: center;
 }
 
-.nav-link{
-  color:rgba(0, 0, 0, .55);
+.nav-link {
+  color: rgba(0, 0, 0, .55);
 }
 
 
@@ -45,16 +47,17 @@ h1 {
 }
 
 footer {
-  
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-height: 5%;
-    background-color: #A7C4A0;
-    color: darkolivegreen;
-    text-align: center;
-    padding: 10px 0; /* optional */
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 5%;
+  background-color: #A7C4A0;
+  color: darkolivegreen;
+  text-align: center;
+  padding: 10px 0;
+  /* optional */
 }
 
 .catName {
@@ -63,10 +66,10 @@ footer {
 
 .footer {
   text-align: center;
-  
+
 }
 
-.logoImg{
+.logoImg {
   max-width: 8%;
   margin-right: 100%;
   border-radius: 50px;
@@ -76,9 +79,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35vh; /* Adjust this value to control the vertical position */
+  height: 35vh;
+  /* Adjust this value to control the vertical position */
   font-size: 30px;
 }
+
 .centered-text {
   text-align: center;
 }
@@ -86,50 +91,51 @@ footer {
 /* footer needs work */
 
 .delete-button {
- 
-=======
-#catJokeButton{
-  position: fixed;
+
+  =======#catJokeButton {
+    position: fixed;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
-}
+  }
 
-.navbar {
-  justify-content: flex-start;
-  margin-left: auto;
-}
+  .navbar {
+    justify-content: flex-start;
+    margin-left: auto;
+  }
 
-/* Change font size and color of the navigation links */
-.nav-link {
-  font-size: 18px;
-  color: #333; /* Change this to your desired color */
-}
+  /* Change font size and color of the navigation links */
+  .nav-link {
+    font-size: 18px;
+    color: #333;
+    /* Change this to your desired color */
+  }
 
-.logoImg {
-  margin-right: auto; /* Push the logo to the left */
-}
-
-
-/* Add a border around the navigation bar */
-.mainContentOnMainPage{
-  display: flex;
-  align-items: row;
-justify-content: center;
-text-align: center ;
-}
-
-.jokes{
-  text-align: center;
-}
+  .logoImg {
+    margin-right: auto;
+    /* Push the logo to the left */
+  }
 
 
-#FilloutFormBtn{
-  color: #333;
-}
+  /* Add a border around the navigation bar */
+  .mainContentOnMainPage {
+    display: flex;
+    align-items: row;
+    justify-content: center;
+    text-align: center;
+  }
 
-.submit{
-  background-color: darkolivegreen;
-  border-color: darkolivegreen;
-  
-}
+  .jokes {
+    text-align: center;
+  }
+
+
+  #FilloutFormBtn {
+    color: #333;
+  }
+
+  .submit {
+    background-color: darkolivegreen;
+    border-color: darkolivegreen;
+
+  }

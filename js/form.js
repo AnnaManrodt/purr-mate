@@ -20,16 +20,16 @@ $(document).ready(function () {
       });
 
     }
-//if the form is filled out correct it moves on to this 
+    //if the form is filled out correct it moves on to this 
     else {
-//translated the data from what was inputed into the feild into what the api can actaully read and fetch the things we want it
+      //translated the data from what was inputed into the feild into what the api can actaully read and fetch the things we want it
       translatedNeeds = specialNeedsTranslation($("#special_needs").val());
       translatedColor = getColorFromNumber($("#color").val());
       translatedfurType = furTypeTranslation($("#furType").val());
       translatedAge = ageTranslation($("#age").val());
       translatedGeoRange = geoRangeTranslation($("#geoRange").val());
       translatedGender = genderTranslation($("#gender").val());
-//furType is connected to do you like a clean house 
+      //furType is connected to do you like a clean house 
     }
     //this object stores all the user data so it can be saved in local and pull out in our results js
     let userInfo = {
@@ -79,7 +79,7 @@ function getColorFromNumber(color) {
 function furTypeTranslation(furType) {
   const furTypeTranslationObject = {
     "Yes": "short",
-    "Sort of" : "medium",
+    "Sort of": "medium",
     "No": "long"
   };
 
@@ -105,7 +105,7 @@ function ageTranslation(age) {
     "Adult": "adult",
     "Senior": "senior"
   };
-console.log(age)
+  console.log(age)
   return ageTranslationObject[age] || null;
 }
 

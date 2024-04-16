@@ -8,28 +8,28 @@ const apiUrl = `https://api-staging.adoptapet.com/search/pet_search?key=hg4nsv85
 
 // Make call to API
 fetch(apiUrl)
-.then( (response) => {
-  return response.json();
-})
-.then ( (data) => {
-  // Creating match results array 
-  const catResults = data.pets;
-  console.log(catResults);
-  
-  // Save the cat results to the localStorage
-  localStorage.setItem('catResults', JSON.stringify(catResults));
-  
-  // Display the rows with the cat results
-  generateMatchRows(catResults);
-  
-  // Mark the entries that have been added as favorites
-  const favoriteCats = JSON.parse(localStorage.getItem('favoriteCats'));
-  if (favoriteCats) {
-    favoriteCats.forEach( (cat) => {
-      $(`span[data-index="${cat.index}"]`).removeAttr('hidden');
-    })
-  }
-})
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    // Creating match results array 
+    const catResults = data.pets;
+    // console.log(catResults);
+
+    // Save the cat results to the localStorage
+    localStorage.setItem('catResults', JSON.stringify(catResults));
+
+    // Display the rows with the cat results
+    generateMatchRows(catResults);
+
+    // Mark the entries that have been added as favorites
+    const favoriteCats = JSON.parse(localStorage.getItem('favoriteCats'));
+    if (favoriteCats) {
+      favoriteCats.forEach((cat) => {
+        $(`span[data-index="${cat.index}"]`).removeAttr('hidden');
+      })
+    }
+  })
 
 
 
@@ -40,12 +40,12 @@ const resultsDivElement = $('.results');
 let favoriteCat = {};
 
 resultsDivElement.on('click', (event) => {
-  
-  
+
+
   const catResults = JSON.parse(localStorage.getItem('catResults'));
-  
+
   // create the favorite cat object being added
-  
+
   if (!jQuery.isEmptyObject($(event.target).data())) { // only execute if on a button with a data-index attribute
     favoriteCat = {
       name: catResults[$(event.target).data('index')].pet_name,
@@ -57,20 +57,20 @@ resultsDivElement.on('click', (event) => {
       resident: `${catResults[$(event.target).data('index')].addr_city}, ${catResults[$(event.target).data('index')].addr_state_code}`,
       index: $(event.target).data('index')
     }
-    
-    
+
+
     // generate the list of favorite cats
     // check to see if there is an existing array with favorite cats.  If not then create a new array.
     let favoriteCats = JSON.parse(localStorage.getItem('favoriteCats'));
-    
+
     if (favoriteCats) {
       // Checking if the favorit cat already exists because we don't want to add another one of the same one to the list
-      if ( !favoriteCats.find( (cat) => {
+      if (!favoriteCats.find((cat) => {
         return JSON.stringify(cat) === JSON.stringify(favoriteCat);
       })) {
         // Add to favorite list
-        favoriteCats.push(favoriteCat);  
-        
+        favoriteCats.push(favoriteCat);
+
         // Show the favorite list icon for selected cats
         $(event.target).siblings('span').removeAttr('hidden');
         localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
@@ -90,13 +90,13 @@ resultsDivElement.on('click', (event) => {
 //////////
 function generateMatchRows(catResults) {
   const resultsDivElement = $('.results');
-  
+
   // Creating the elements
   const divContainerElement = $(`<div class="container">`);
-  
+
   for (let i = 0; i < catResults.length; i++) {
-    
-    
+
+
     const rowDivElement = $(`<div class="row text-left border">`)
     const firstRowDivElement = $(`<div class="row">`);
     const nameDivElement = $(`<div class="col-4 mb-3 catName">Name: ${catResults[i].pet_name}</div>`);
@@ -109,8 +109,8 @@ function generateMatchRows(catResults) {
     const thirdRowDivElement = $(`<div class="row justify-content-center mb-3">`);
     const addToFavButtonElement = $(`<button  type= "button" class="col-2 btn btn-outline-secondary" data-index=${i}>Add to Favorite List</button>`)
     const heartImageElement = $(`<span class="col-1" hidden data-index=${i}>😻</span>`);
-    
-    
+
+
     // Appending them back to the HTML to the results div element
     firstRowDivElement.append(nameDivElement);
     firstRowDivElement.append(genderDivElement);
@@ -127,5 +127,5 @@ function generateMatchRows(catResults) {
     resultsDivElement.append(divContainerElement);
   }
 
-  
+
 }
