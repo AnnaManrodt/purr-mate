@@ -21,6 +21,8 @@ header {
 }
 
 .headerNavContainer {
+  display: flex;
+  justify-content: center;
   padding: 10px;
   text-align: center;
 }
@@ -44,12 +46,13 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    max-height: 5%;
     background-color: #A7C4A0;
     color: darkolivegreen;
     text-align: center;
-    padding: 10px 0; /* optional */
     text-align: center; /* optional */
-    position: absolute;
+    padding: 30px 0;
+    position: fixed;
     }
     .footer {
       margin-bottom: 60px; /* Adjust this value to match the height of your footer */
@@ -82,3 +85,4 @@ footer {
 }
 
 /* footer needs work */
+
