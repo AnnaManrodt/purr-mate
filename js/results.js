@@ -173,7 +173,7 @@ function generateMatchRows(catResults) {
     const aDivElement = $(`<a class="link" href=${catResults[i].large_results_photo_url}>Image: ${catResults[i].large_results_photo_url}</a>`)
     const locationDivElement = $(`<div class="col-4 mb-3">Location: ${catResults[i].addr_city}, ${catResults[i].addr_state_code}</div>`);
     const thirdRowDivElement = $(`<div class="row justify-content-center mb-3">`);
-    const addToFavButtonElement = $(`<button class="col-2" data-index=${i}>Add to Favorite List</button>`)
+    const addToFavButtonElement = $(`<button  type= "button" class="col-2 btn btn-outline-secondary" data-index=${i}>Add to Favorite List</button>`)
     const heartImageElement = $(`<span class="col-1" hidden data-index=${i}>😻</span>`);
     
     
