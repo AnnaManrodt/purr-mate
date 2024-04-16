@@ -19,11 +19,13 @@ header {
   font-family: "Architects Daughter", cursive;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
 .headerNavContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
   text-align: center;
 }
@@ -83,3 +85,37 @@ footer {
 
 /* footer needs work */
 
+#catJokeButton{
+  position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar {
+  justify-content: flex-start;
+  margin-left: auto;
+}
+
+/* Change font size and color of the navigation links */
+.nav-link {
+  font-size: 18px;
+  color: #333; /* Change this to your desired color */
+}
+
+.logoImg {
+  margin-right: auto; /* Push the logo to the left */
+}
+
+
+/* Add a border around the navigation bar */
+.mainContentOnMainPage{
+  display: flex;
+  align-items: row;
+justify-content: center;
+text-align: center ;
+}
+
+.jokes{
+  text-align: center;
+}
