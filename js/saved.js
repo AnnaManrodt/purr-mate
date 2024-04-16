@@ -78,9 +78,20 @@ function generateMatchRows(savedCats) {
               localStorage.setItem('favoriteCats', JSON.stringify(savedCats)); // Update local storage
               console.log("Saved cats in local storage:", JSON.parse(localStorage.getItem('favoriteCats')));
           }
+          
       });
+      function displayRating() {
+        savedCats.forEach((cat, index) => {
+            const ratingValue = cat.rating;
+            $(`input[name="rating-${index}"][value="${ratingValue}"]`).prop('checked', true);
+        });
+    }
+    
+    // Call the function to display the rating
+    displayRating();
   });
 }
+
 
 // Load saved cats from local storage
 let savedCats = JSON.parse(localStorage.getItem('favoriteCats')) || [];
@@ -88,7 +99,7 @@ let savedCats = JSON.parse(localStorage.getItem('favoriteCats')) || [];
 // Generate match rows
 generateMatchRows(savedCats);
 
-
+// fix so it appears once all favorites are deleted. 
 function toggleNoSavedPurrMateMessage() {
     const noSavedPurrMateMessage = document.getElementById('noSavedPurrMateMessage');
     const contentPresent = document.querySelector('.centered-text'); // Change '.someContentClass' to the appropriate selector
@@ -100,7 +111,6 @@ function toggleNoSavedPurrMateMessage() {
     }
 }
 
-// Call the function when needed
 toggleNoSavedPurrMateMessage();
 
  
