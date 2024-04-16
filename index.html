@@ -31,154 +31,154 @@
   <title>Purr Mate</title>
 </head>
 
-
 <body>
+  <div id="pageContainer">
+    <div id="contentWrap">
 
-  <div class="headerNavContainer">
-    <header>
-      <h1>Purr Mate</h1>
-      <h5>Find Your Purrfect Cat!</h5>
+      <div class="headerNavContainer">
+        <header>
+          <a href="./main.html">
+            <img src="../purr-mate/html/image2 (1).jpeg" class="logoImg" alt="purr mate logo"></a>
+          <h1 class="">Purr Mate</h1>
+          <h5>Find Your Purrfect Cat!</h5>
 
-    </header>
+        </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center ">
 
-      <!-- some sytlying such as pushing to the left of the page and chaing font size and color, mayble a border or something aorund them ? -->
-      <style>
-      </style>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link">Home</a>
-                </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./html/save.html"> Favorites 😻</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="html/results.html">Your Results</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./html/giggles.html">Giggles</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-  </div>
+          <!-- some sytlying such as pushing to the left of the page and chaing font size and color, mayble a border or something aorund them ? -->
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./main.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Form</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./html/save.html"> Favorites 😻</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="html/results.html">Your Results</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./html/giggles.html">Giggles</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      </div>
 
-  <!-- fix form and connect to JS -->
+      <!-- fix form and connect to JS -->
 
 
-  <!-- do you like a needy animal (spec needs animal), whats your favotie color? (cat color) do you like a clean house  (for fur length) how many miles will you go for a cat? (distance away) (maybe have these question come from the cat?) postal code? tod deterim location,  whats your purrrrfered cat gender, male female, idk as long as it a cat 
+      <!-- do you like a needy animal (spec needs animal), whats your favotie color? (cat color) do you like a clean house  (for fur length) how many miles will you go for a cat? (distance away) (maybe have these question come from the cat?) postal code? tod deterim location,  whats your purrrrfered cat gender, male female, idk as long as it a cat 
 what age group are you looking for? baby young adult senior -->
 
 
-  <form class="form-group">
-    <label for="exampleInputEmail1">Email address:</label><br>
-    <input type="email" id="email" name="email" required><br>
+      <form class="form-group">
+        <label for="exampleInputEmail1">Email address:</label><br>
+        <input type="email" id="email" name="email" required><br>
 
-<div class="form-group">
-      <label for="special_needs">Do you want a extra specail needy cat?</label>
-      <select class="form-control" id="special_needs" name="special_needs" required>
-        <option selected>Choose...</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-    </div>
+        <div class="form-group">
+          <label for="special_needs">Do you want a extra specail needy cat?</label>
+          <select class="form-control" id="special_needs" name="special_needs" required>
+            <option selected>Choose...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
 
-    <label for="color">What color kitty?</label><br>
-    <!--Form Group:  Options listed -->
-    <div class="form-group">
-      <select class="form-control" id="color" required>
-        <option selected>Choose...</option>
-        <option>Black & White or Tuxedo</option>
-        <option>Black</option>
-        <option>Brown or Chocolate</option>
-        <option>Tan or Fawn</option>
-        <option>Orange or Red</option>
-        <option>Spotted Tabby/Leopard Spotted</option>
-      </select>
-    </div>
-
-
-    <div class="form-group">
-      <label for="furType">Do you like a clean house?</label>
-      <select class="form-control" id="furType" name="furType" required>
-        <option selected>Choose...</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-    </div>
-
-    <!--Form Group for georange - options listed-->
-
-    <div class="form-group">
-      <label for="geoRange">How far will you travel for me?</label>
-      <select class="form-control" id="geoRange" required> 
-        <option selected>Choose...</option>
-        <option>Less than 35 miles</option>
-        <option>Less than 50 miles</option>
-        <option>Less than 75 miles</option>
-        <option>Less than 100 miles</option>
-        <option>Less than 250 miles</option>
-      </select>
-    </div>
-
-    <!--Form Needs Validation for zip code-->
-    <div class="col-md-3 mb-3 form-group">
-      <label for="zipCode">Enter your zip code</label>
-      <input type="number" class="form-control" id="zipCode" placeholder="Zip" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
-      </div>
-
-      <!--Form Group Age - options listed-->
-
-      <div class="form-group">
-        <label for="age">What age group are you looking for?</label>
-        <select class="form-control" id="age" name="age" required>
-          <option selected>Choose...</option>
-          <option>Kitten</option>
-          <option>Young</option>
-          <option>Adult</option>
-          <option>Senior</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="gender">Girl or boy feline friend?</label>
-        <select class="form-control" id="gender" name="gender" required>
-          <option selected>Choose...</option>
-          <option>Female</option>
-          <option>Male</option>
-          <option>I don't care, as long as they are a cat!</option>
-        </select>
-      </div>
+        <label for="color">What color kitty?</label><br>
+        <!--Form Group:  Options listed -->
+        <div class="form-group">
+          <select class="form-control" id="color" required>
+            <option selected>Choose...</option>
+            <option>Black & White or Tuxedo</option>
+            <option>Black</option>
+            <option>Brown or Chocolate</option>
+            <option>Tan or Fawn</option>
+            <option>Orange or Red</option>
+            <option>Spotted Tabby/Leopard Spotted</option>
+          </select>
+        </div>
 
 
-      <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-  </form>
+        <div class="form-group">
+          <label for="furType">Do you like a clean house?</label>
+          <select class="form-control" id="furType" name="furType" required>
+            <option selected>Choose...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <!--Form Group for georange - options listed-->
+
+        <div class="form-group">
+          <label for="geoRange">How far will you travel for me?</label>
+          <select class="form-control" id="geoRange" required>
+            <option selected>Choose...</option>
+            <option>Less than 35 miles</option>
+            <option>Less than 50 miles</option>
+            <option>Less than 75 miles</option>
+            <option>Less than 100 miles</option>
+            <option>Less than 250 miles</option>
+          </select>
+        </div>
+
+        <!--Form Needs Validation for zip code-->
+        <div class="col-md-3 mb-3 form-group">
+          <label for="zipCode">Enter your zip code</label>
+          <input type="number" class="form-control" id="zipCode" placeholder="Zip" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+
+          <!--Form Group Age - options listed-->
+
+          <div class="form-group">
+            <label for="age">What age group are you looking for?</label>
+            <select class="form-control" id="age" name="age" required>
+              <option selected>Choose...</option>
+              <option>Kitten</option>
+              <option>Young</option>
+              <option>Adult</option>
+              <option>Senior</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Girl or boy feline friend?</label>
+            <select class="form-control" id="gender" name="gender" required>
+              <option selected>Choose...</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>I don't care, as long as they are a cat!</option>
+            </select>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+      </form>
 
 </body>
 
-</html>
 
 </div>
-
 <!-- some styting to get to the bottom and centered -->
-<footer class="footer">
-  <h4>Made With Love 💕 and Cat Hair</h4>
-  <h6>&copy; 2024. </h6>
-</footer>
-
+    <footer class="footer">
+      <h4>Made With Love 💕 and Cat Hair</h4>
+      <h6>&copy; 2024. </h6>
+    </footer>
+</div>
 
 
 <!-- jquery and Bootstrap JS script tags  -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <!-- Your own JS script tags go here  -->
 <script src="../purr-mate/js/form.js"></script>

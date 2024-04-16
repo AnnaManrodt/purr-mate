@@ -3,8 +3,17 @@ body{
     font-family: "Dekko", cursive;
     font-weight: 300;
     font-style: normal;
+    position: relative;
+    min-height: 100vh;
+}
+#page-container{
+  position: relative;
+  min-height: 100vh;
 }
 
+#contentWrap{
+  padding-bottom: 2.5rem 
+}
 header {
   font-family: "Architects Daughter", cursive;
   font-weight: 400;
@@ -14,8 +23,12 @@ header {
 .headerNavContainer {
   padding: 10px;
   text-align: center;
-
 }
+
+.nav-link{
+  color:rgba(0, 0, 0, .55);
+}
+
 
 h1 {
   font-size: 36px;
@@ -26,13 +39,7 @@ h1 {
   text-decoration: none;
 }
 
-h5 {
-  font-size: 18px;
-  color: rgb(21, 31, 3)
-}
-
 footer {
-    position: fixed;
     /* or position: absolute; */
     left: 0;
     bottom: 0;
@@ -40,18 +47,24 @@ footer {
     background-color: #A7C4A0;
     color: darkolivegreen;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0; /* optional */
+    text-align: center; /* optional */
+    position: absolute;
     }
 
 .catName {
   font-size: 1.5rem;
 }
 
-h5 {
-  font-size: 18px;
-  color: rgb(21, 31, 3)
-}
-
 .footer {
   text-align: center;
+  
+}
 
+.logoImg{
+  max-width: 8%;
+  margin-right: 100%;
+  border-radius: 50px;
+}
+
+/* footer needs work */
