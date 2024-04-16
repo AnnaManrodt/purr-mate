@@ -21,6 +21,8 @@ header {
 }
 
 .headerNavContainer {
+  display: flex;
+  justify-content: center;
   padding: 10px;
   text-align: center;
 }
@@ -44,12 +46,13 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    max-height: 5%;
     background-color: #A7C4A0;
     color: darkolivegreen;
     text-align: center;
-    padding: 10px 0; /* optional */
     text-align: center; /* optional */
-    position: absolute;
+    padding: 30px 0;
+    position: fixed;
     }
 
 .catName {
@@ -68,3 +71,26 @@ footer {
 }
 
 /* footer needs work */
+
+/* CSS for larger screens */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+main{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
