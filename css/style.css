@@ -8,6 +8,7 @@ body {
   padding-bottom: 60px;
 }
 
+
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -24,12 +25,37 @@ header {
   text-align: center;
 }
 
+
+
 .headerNavContainer {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 10px 20px; 
+}
+.logoNavContainer {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+}
+
+/* .headerNavContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   text-align: center;
+} */
+
+nav ul {
+  list-style-type: none; /* Remove default list styles */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for layout */
+}
+
+nav ul li {
+  display: inline; /* Display list items horizontally */
+  margin-right: auto; /* Add spacing between list items */
 }
 
 .nav-link {
@@ -73,6 +99,7 @@ footer {
   max-width: 8%;
   margin-right: 100%;
   border-radius: 50px;
+
 }
 
 .centered-text-container {
@@ -90,19 +117,17 @@ footer {
 
 /* footer needs work */
 
-.delete-button {
-
-  =======#catJokeButton {
+  #catJokeButton {
     position: fixed;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .navbar {
+  /* .navbar {
     justify-content: flex-start;
     margin-left: auto;
-  }
+  } */
 
   /* Change font size and color of the navigation links */
   .nav-link {
