@@ -90,12 +90,5 @@ generateMatchRows(savedCats);
 
 
 
- 
-
-// have a default message of no cats saved yet
-
-
-// import React, { useState, useEffect } from 'react';*/
-
 
 
