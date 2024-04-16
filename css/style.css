@@ -134,8 +134,21 @@ footer {
     color: #333;
   }
 
+
+/* Add a border around the navigation bar */
+.mainContentOnMainPage{
+display: flex;
+align-items: row;
+justify-content: center;
+text-align: center ;
+}
+
+.jokes{
+  text-align: center;
+}
   .submit {
     background-color: darkolivegreen;
     border-color: darkolivegreen;
 
   }
+
