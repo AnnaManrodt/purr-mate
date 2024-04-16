@@ -1,26 +1,4 @@
-// let catFactsUrl = 'https://cat-fact.herokuapp.com/facts';
-
-
-// const jokesDiv = $('.jokes');
-
-// fetch(catFactsUrl)
-//   .then(function(response){
-//   return response.json();
-// })
-//   .then(function(data){
-//   console.log(data);
-
-//   for( let i=0; i < data.length; i++){
-//     const object = data[i]
-//     console.log(object.text);
-//       const pTag = $("<p>")
-//       pTag.text(object.text);
-//       jokesDiv.append(pTag);
-
-//   }
-
-// })
-
+//an array of cat jokes 
 catJokes= [
   "Why did the cats ask for a drum set? They wanted to make some mewsic!",
   " What's a cat's favorite TV show? Claw and Order.",
@@ -69,7 +47,7 @@ catJokes= [
 "Where do cats enjoy spending a family day? The mew-seum.",
 "What's a kitten's favorite kind of sticker? Scratch and sniff."
 ]
-
+//a function that generates a random cat jokes form the array each time a button is pressed
 function getRandomCatJoke() {
   const randomIndex = Math.floor(Math.random() * catJokes.length);
   return catJokes[randomIndex];
