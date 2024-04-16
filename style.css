@@ -22,6 +22,8 @@ header {
 }
 
 .headerNavContainer {
+  display: flex;
+  justify-content: center;
   padding: 10px;
   text-align: center;
 }
@@ -46,6 +48,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    max-height: 5%;
     background-color: #A7C4A0;
     color: darkolivegreen;
     text-align: center;
@@ -79,3 +82,4 @@ footer {
 }
 
 /* footer needs work */
+
