@@ -1,10 +1,18 @@
 
 
 const form = $(".form-group")
+let translatedNeeds = "";
+let translatedColor = "";
+let translatedfurType = "";
+let transatedAge = "";
+let translatedGeoRange = "";
+let translatedGender = "";
+specialNeedsTranslation(0);
 
 $(document).ready(function () {
   $('form').submit(function (event) {
     event.preventDefault();
+    specialNeedsTranslation(0);
     if (!form[0].checkValidity()) {
       console.log("form invalid");
       form.querySelectorAll("input").forEach(i => {
@@ -13,99 +21,114 @@ $(document).ready(function () {
 
     }
 
-    else {      
+    else {
 
-      
-      let translatedNeeds = specialNeedsTranslation(special_needs);
-      let translatedColor = getColorFromNumber(color);
-      let translatedfurType = furTypeTranslation(furType);
-      let transatedAge = ageTranslation(age);
-      let translatedGeoRange =  geoRangeTranslation(geoRange);
-      let translatedGender = genderTranslation(gender);
-      
-      function specialNeedsTranslation(special_needs) {
-      const special_needsTranslationObject = {
-        "Yes": 1,
-        "No": 0
-      };
-    
-      return special_needsTranslationObject[special_needs] || null;
+      specialNeedsTranslation(special_needs)
+
+      translatedNeeds = specialNeedsTranslation($("#special_needs").val());
+      translatedColor = getColorFromNumber($("#color").val());
+      translatedfurType = furTypeTranslation($("#furType").val());
+      translatedAge = ageTranslation($("#age").val());
+      translatedGeoRange = geoRangeTranslation($("#geoRange").val());
+      translatedGender = genderTranslation($("#gender").val());
+
     }
+    let userInfo = {
+      email: $("#email").val(),
+      specialNeeds: translatedNeeds,
+      color: translatedColor,
+      hair: translatedfurType,
+      geoRange: translatedGeoRange,
+      location: Number($("#zipCode").val()),
+      age: translatedAge,
+      gender: translatedGender,
 
-    function getColorFromNumber(color) {
-      const catColorObject = {
-        "Black": 46,
-        "Black & White or Tuxedo": 47,
-        "Brown or Chocolate": 48,
-        "Orange or Red": 54,
-        "Spotted Tabby/Leopard Spotted": 56,
-        "Tan or Fawn": 57
-      };
-    
-      return catColorObject[color] || null;
-    }
+    };
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    console.log(userInfo);
 
-    function furTypeTranslation(furType) {
-      const furTypeTranslationObject = {
-        "Yes": 1,
-        "No": 0
-      };
-    
-      return furTypeTranslationObject[furType] || null;
-    }
-
-    function geoRangeTranslation(geoRange) {
-      const geo_rangeObjects = {
-        "less than 35 miles": 35,
-        "Less than 50 miles": 50,
-        "Less than 75 miles": 75,
-        "Less than 100 miles": 100,
-        "Less than 250 miles": 250
-      };
-    
-      return geo_rangeObjects[geoRange] || null;
-    }
-
-    function ageTranslation(age) {
-      const ageTranslationObject = {
-        "Kitten": "kitten",
-        "Young": "young",
-        "Adult": "adult",
-        "Senior": "senior"
-      };
-
-      return ageTranslationObject[age] || null;
-    }
-
-    function genderTranslation(gender) {
-      const genderTranslationObject = {
-        "Female": "f",
-        "Male": "m",
-        "I don't care, as long as they are a cat!": null
-      };
-
-      return genderTranslationObject[gender] || null;
-    }
-
-    window.location.href = "html/results.html"
-  }
-      let userInfo = {
-        email: $("#email").val(),
-        specialNeeds: translatedNeeds,
-        color: translatedColor,
-        hair: translatedfurType,
-        geoRange: translatedGeoRange,
-        location: $("#zipCode").val(),
-        age: ageTranslation,
-        gender: translatedGender,
-
-      };
-      localStorage.setItem('userInfo', JSON.stringify(userInfo));
-      console.log(userInfo);
-
-      window.location.href = "html/results.html";
+    window.location.href = "html/results.html";
   })
 })
+
+
+function specialNeedsTranslation(special_needs) {
+  const special_needsTranslationObject = {
+
+    "Yes": 1,
+    "No": 0
+  };
+  console.log(special_needs)
+  console.log(special_needsTranslationObject[special_needs])
+  return special_needsTranslationObject[special_needs] || null;
+}
+
+function getColorFromNumber(color) {
+  const catColorObject = {
+    "Black": 46,
+    "Black & White or Tuxedo": 47,
+    "Brown or Chocolate": 48,
+    "Orange or Red": 54,
+    "Spotted Tabby/Leopard Spotted": 56,
+    "Tan or Fawn": 57
+  };
+
+  return catColorObject[color];
+}
+
+function furTypeTranslation(furType) {
+  const furTypeTranslationObject = {
+    "Yes": "short",
+    "Sort of" : "medium",
+    "No": "long"
+  };
+
+  return furTypeTranslationObject[furType];
+}
+
+function geoRangeTranslation(geoRange) {
+  const geo_rangeObjects = {
+    "Less than 35 miles": 35,
+    "Less than 50 miles": 50,
+    "Less than 75 miles": 75,
+    "Less than 100 miles": 100,
+    "Less than 250 miles": 250
+  };
+
+  return geo_rangeObjects[geoRange] || null;
+}
+
+function ageTranslation(age) {
+  const ageTranslationObject = {
+    "Kitten": "kitten",
+    "Young": "young",
+    "Adult": "adult",
+    "Senior": "senior"
+  };
+console.log(age)
+  return ageTranslationObject[age] || null;
+}
+
+
+
+function genderTranslation(gender) {
+  const genderTranslationObject = {
+    "Female": "f",
+    "Male": "m",
+    "I don't care, as long as they are a cat!": null
+  };
+
+  return genderTranslationObject[gender] || null;
+}
+
+function addNum(num1, num2){
+  const added = num1 + num2;
+  return added
+}
+console.log(addNum(1,2));
+
+specialNeedsTranslation(0);
+
 //transation for string
 // })
 
