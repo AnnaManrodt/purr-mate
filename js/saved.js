@@ -14,7 +14,7 @@ function generateMatchRows(savedCats) {
       
       const rowDivElement = $(`<div class="row text-left border">`);
       const firstRowDivElement = $(`<div class="row">`);
-      const nameDivElement = $(`<div>Name: ${cat.name} </div>`);
+      const nameDivElement = $(`<div class = "col-4 mb-3 " style="font-size: 25px; " >Name: ${cat.name} </div>`);
       const genderDivElement = $(`<div class="col-4 mb-3">Gender: ${cat.gender}</div>`);
       const breedDivElement = $(`<div class="col-4 mb-3">Breed: ${cat.breed}</div>`);
       const secondRowDivElement = $(`<div class="row">`);
@@ -38,7 +38,7 @@ function generateMatchRows(savedCats) {
           <input type="radio" id="first-rate5-${index}" name="rating-${index}" value="5" />
           <label for="first-rate5-${index}" title="Amazing">5 stars</label>
       </fieldset>`);      
-      const deleteButton = $(`<button class="btn btn-outline-danger delete-button col-1" >Delete</button>`);
+      const deleteButton = $(`<button class="btn btn-outline-danger  delete-button col-1 mb-3 " >Delete</button>`);
       // Set a custom data attribute to store the index of the saved cat
       deleteButton.attr('data-index', index);
 
@@ -78,9 +78,20 @@ function generateMatchRows(savedCats) {
               localStorage.setItem('favoriteCats', JSON.stringify(savedCats)); // Update local storage
               console.log("Saved cats in local storage:", JSON.parse(localStorage.getItem('favoriteCats')));
           }
+          
       });
+      function displayRating() {
+        savedCats.forEach((cat, index) => {
+            const ratingValue = cat.rating;
+            $(`input[name="rating-${index}"][value="${ratingValue}"]`).prop('checked', true);
+        });
+    }
+    
+    // Call the function to display the rating
+    displayRating();
   });
 }
+
 
 // Load saved cats from local storage
 let savedCats = JSON.parse(localStorage.getItem('favoriteCats')) || [];
@@ -88,7 +99,21 @@ let savedCats = JSON.parse(localStorage.getItem('favoriteCats')) || [];
 // Generate match rows
 generateMatchRows(savedCats);
 
+// fix so it appears once all favorites are deleted. 
+function toggleNoSavedPurrMateMessage() {
+    const noSavedPurrMateMessage = document.getElementById('noSavedPurrMateMessage');
+    const contentPresent = document.querySelector('.centered-text'); // Change '.someContentClass' to the appropriate selector
+
+    if (contentPresent) {
+        noSavedPurrMateMessage.style.display = 'none'; // Hide the message
+    } else {
+        noSavedPurrMateMessage.style.display = 'block'; // Show the message
+    }
+}
 
 
 
+toggleNoSavedPurrMateMessage();
+
+ 
 
