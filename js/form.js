@@ -13,13 +13,82 @@ $(document).ready(function () {
 
     }
 
-    else {
+    else {      
 
-      let translatedNeeds = specialNeedsTranslation();
-      let translatedColor = getColorFromNumber();
-      let translatedfurType = furTypeTranslation();
-      let translatedGeoRange = ageTranslation();
-      let translatedGender = genderTranslation();
+      
+      let translatedNeeds = specialNeedsTranslation(special_needs);
+      let translatedColor = getColorFromNumber(color);
+      let translatedfurType = furTypeTranslation(furType);
+      let transatedAge = ageTranslation(age);
+      let translatedGeoRange =  geoRangeTranslation(geoRange);
+      let translatedGender = genderTranslation(gender);
+      
+      function specialNeedsTranslation(special_needs) {
+      const special_needsTranslationObject = {
+        "Yes": 1,
+        "No": 0
+      };
+    
+      return special_needsTranslationObject[special_needs] || null;
+    }
+
+    function getColorFromNumber(color) {
+      const catColorObject = {
+        "Black": 46,
+        "Black & White or Tuxedo": 47,
+        "Brown or Chocolate": 48,
+        "Orange or Red": 54,
+        "Spotted Tabby/Leopard Spotted": 56,
+        "Tan or Fawn": 57
+      };
+    
+      return catColorObject[color] || null;
+    }
+
+    function furTypeTranslation(furType) {
+      const furTypeTranslationObject = {
+        "Yes": 1,
+        "No": 0
+      };
+    
+      return furTypeTranslationObject[furType] || null;
+    }
+
+    function geoRangeTranslation(geoRange) {
+      const geo_rangeObjects = {
+        "less than 35 miles": 35,
+        "Less than 50 miles": 50,
+        "Less than 75 miles": 75,
+        "Less than 100 miles": 100,
+        "Less than 250 miles": 250
+      };
+    
+      return geo_rangeObjects[geoRange] || null;
+    }
+
+    function ageTranslation(age) {
+      const ageTranslationObject = {
+        "Kitten": "kitten",
+        "Young": "young",
+        "Adult": "adult",
+        "Senior": "senior"
+      };
+
+      return ageTranslationObject[age] || null;
+    }
+
+    function genderTranslation(gender) {
+      const genderTranslationObject = {
+        "Female": "f",
+        "Male": "m",
+        "I don't care, as long as they are a cat!": null
+      };
+
+      return genderTranslationObject[gender] || null;
+    }
+
+    window.location.href = "html/results.html"
+  }
       let userInfo = {
         email: $("#email").val(),
         specialNeeds: translatedNeeds,
@@ -27,75 +96,14 @@ $(document).ready(function () {
         hair: translatedfurType,
         geoRange: translatedGeoRange,
         location: $("#zipCode").val(),
-        age: $("#age").val(),
+        age: ageTranslation,
         gender: translatedGender,
 
       };
-
       localStorage.setItem('userInfo', JSON.stringify(userInfo));
-      console.log(userInfo)
+      console.log(userInfo);
 
-      function specialNeedsTranslation(special_needs) {
-        const special_needsTranslationObject = {
-          "Yes": 1,
-          "No": 0
-        }
-        return special_needsTranslationObject[special_needs] || null;
-      }
-
-      function getColorFromNumber(color) {
-        const catColorObject = {
-          "Black": 46,
-          "Black & White or Tuxedo": 47,
-          "Brown or Chocolate": 48,
-          "Orange or Red": 54,
-          "Spotted Tabby/Leopard Spotted": 56,
-          "Tan or Fawn": 57
-        }
-        return getColorFromNumber[color] || null;
-      }
-
-      function furTypeTranslation(furType) {
-        const furTypeTranslationObject = {
-          "Yes": 1,
-          "No": 0
-        }
-       return furTypeTranslation[furType] || null;
-      }
-
-      function geoRangeTranslation(geoRange) {
-        const geo_rangeObjects = {
-          "less than 35 miles": 35,
-          "Less than 50 miles": 50,
-          "Less than 75 miles": 75,
-          "Less than 100 miles": 100,
-          "Less than 250 miles": 250
-        }
-        return geoRangeTranslation[geoRange] || null;
-      }
-
-      function ageTranslation(age) {
-        const ageTranslationObject = {
-          "Kitten": "kitten",
-          "Young": "young",
-          "Adult": "adult",
-          "Senior": "senior"
-        }
-        return ageTranslation[age] || null;
-      }
-
-      function genderTranslation(gender) {
-        const genderTranslationArray = {
-          "Female": "f",
-          "Male": "m",
-          "I don't care, as long as they are a cat!": null
-        }
-        return genderTranslation[gender] || null;
-      }
-
-      window.location.href = "html/results.html"
-    }
-    // doesnt work yeta
+      window.location.href = "html/results.html";
   })
 })
 //transation for string
