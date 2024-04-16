@@ -15,15 +15,15 @@ function generateMatchRows(savedCats) {
       const rowDivElement = $(`<div class="row text-left border">`);
       const firstRowDivElement = $(`<div class="row">`);
       const nameDivElement = $(`<div>Name: ${cat.name} </div>`);
-      const genderDivElement = $(`<div class="col-4 mb-3">Gender: ${cat.sex}</div>`);
-      const breedDivElement = $(`<div class="col-4 mb-3">Breed: ${cat.primary_breed}</div>`);
+      const genderDivElement = $(`<div class="col-4 mb-3">Gender: ${cat.gender}</div>`);
+      const breedDivElement = $(`<div class="col-4 mb-3">Breed: ${cat.breed}</div>`);
       const secondRowDivElement = $(`<div class="row">`);
       const imageDivElement = $(`<div class="col-8 mb-3">`);
-      const aDivElement = $(`<a class="link" href=${cat.large_results_photo_url}>Image: ${cat.large_results_photo_url}</a>`)
-      const locationDivElement = $(`<div class="col-4 mb-3">Location: ${cat.addr_city}, ${cat.addr_state_code}</div>`);
-      const thirdRowDivElement = $(`<div class="row justify-content-center mb-3">`);
-
+      const aDivElement = $(`<a class="link" href=${cat.image}>Image: ${cat.image}</a>`)
+      const locationDivElement = $(`<div class="col-4 mb-3">Location: ${cat.resident}</div>`);
+      const thirdRowDivElement = $(`<div class="row justify-content-between mb-3">`);
       const heartImageElement = $(`<span class="col-1" hidden data-index=${index}>😻</span>`);
+    
       const starRating = $(`<fieldset class="starability-basic">
           <legend>Purr Rating:</legend>
           <input type="radio" id="no-rate-${index}" class="input-no-rate" name="rating-${index}" value="0" checked aria-label="No rating." />
@@ -38,7 +38,7 @@ function generateMatchRows(savedCats) {
           <input type="radio" id="first-rate5-${index}" name="rating-${index}" value="5" />
           <label for="first-rate5-${index}" title="Amazing">5 stars</label>
       </fieldset>`);      
-      const deleteButton = $(`<button class="btn btn-outline-danger delete-button">Delete</button>`);
+      const deleteButton = $(`<button class="btn btn-outline-danger delete-button col-1" >Delete</button>`);
       // Set a custom data attribute to store the index of the saved cat
       deleteButton.attr('data-index', index);
 
@@ -53,6 +53,7 @@ function generateMatchRows(savedCats) {
       thirdRowDivElement.append(heartImageElement);
       rowDivElement.append(firstRowDivElement);
       rowDivElement.append(secondRowDivElement);
+      rowDivElement.append(thirdRowDivElement)
       rowDivElement.append(thirdRowDivElement)
       divContainerElement.append(rowDivElement);
    
