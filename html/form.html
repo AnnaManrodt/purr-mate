@@ -67,27 +67,20 @@
       </nav>
   </div>
 
-  <!-- fix form and connect to JS -->
-
-  <!-- do you like a needy animal (spec needs animal), whats your favotie color? (cat color) do you like a clean house  (for fur length) how many miles will you go for a cat? (distance away) (maybe have these question come from the cat?) postal code? tod deterim location,  whats your purrrrfered cat gender, male female, idk as long as it a cat 
-what age group are you looking for? baby young adult senior -->
-
   <main>
     <form class="form-group">
-      <div class="form-group" id="emailLength" 
-      <label for="email">Email address:</label><br>
+      <div class="form-group" id="emailLength" <label for="email">Email address:</label><br>
         <input type="email" id="email" name="email" required autocomplete="on"><br>
       </div>
 
       <div class="form-group">
-        <label for="special_needs">Do you want a extra specail needy cat?</label>
+        <label for="special_needs">Do you want an extra special needs cat?</label>
         <select class="form-control" id="special_needs" name="special_needs" required>
           <option selected>Choose...</option>
           <option>Yes</option>
           <option>No</option>
         </select>
       </div>
-
 
       <div class="form-group">
         <label for="color">What color kitty?</label><br>
@@ -102,7 +95,6 @@ what age group are you looking for? baby young adult senior -->
         </select>
       </div>
 
-
       <div class="form-group">
         <label for="furType">Do you like a clean house?</label>
         <select class="form-control" id="furType" name="furType" required>
@@ -112,8 +104,6 @@ what age group are you looking for? baby young adult senior -->
           <option>No</option>
         </select>
       </div>
-
-      <!--Form Group for georange - options listed-->
 
       <div class="form-group">
         <label for="geoRange">How far will you travel for me?</label>
@@ -127,40 +117,36 @@ what age group are you looking for? baby young adult senior -->
         </select>
       </div>
 
-      <!--Form Needs Validation for zip code-->
       <div class="form-group">
-
         <label for="zipCode">Enter your zip code</label>
         <input type="number" class="form-control" id="zipCode" placeholder="5 digit zip code" required>
-      
-        </div>
+      </div>
 
-        <div class="form-group">
-          <label for="age">What age group are you looking for?</label>
-          <select class="form-control" id="age" name="age" required>
-            <option selected>Choose...</option>
-            <option>Kitten</option>
-            <option>Young</option>
-            <option>Adult</option>
-            <option>Senior</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="age">What age group are you looking for?</label>
+        <select class="form-control" id="age" name="age" required>
+          <option selected>Choose...</option>
+          <option>Kitten</option>
+          <option>Young</option>
+          <option>Adult</option>
+          <option>Senior</option>
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label for="gender">Girl or boy feline friend?</label>
-          <select class="form-control" id="gender" name="gender" required>
-            <option selected>Choose...</option>
-            <option>Female</option>
-            <option>Male</option>
-            <option>I don't care, as long as they are a cat!</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="gender">Girl or boy feline friend?</label>
+        <select class="form-control" id="gender" name="gender" required>
+          <option selected>Choose...</option>
+          <option>Female</option>
+          <option>Male</option>
+          <option>I don't care, as long as they are a cat!</option>
+        </select>
+      </div>
 
-
-        <button type="submit" class="btn btn-outline-secondary justify-content-center " id="submit">Submit</button>
+      <button type="submit" class="btn btn-outline-secondary justify-content-center " id="submit">Submit</button>
     </form>
   </main>
-  <!-- some styting to get to the bottom and centered -->
+
   <div class="footer">
     <footer>
       <h4>Made With Love 💕 and Cat Hair</h4>
