@@ -34,7 +34,7 @@ fetch(apiUrl)
 
 
 //////////
-// Event Listners
+// Event Listeners
 //////////
 const resultsDivElement = $('.results');
 let favoriteCat = {};
@@ -64,7 +64,7 @@ resultsDivElement.on('click', (event) => {
     let favoriteCats = JSON.parse(localStorage.getItem('favoriteCats'));
 
     if (favoriteCats) {
-      // Checking if the favorit cat already exists because we don't want to add another one of the same one to the list
+      // Checking if the favorite cat already exists because we don't want to add another one of the same one to the list
       if (!favoriteCats.find((cat) => {
         return JSON.stringify(cat) === JSON.stringify(favoriteCat);
       })) {

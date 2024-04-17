@@ -47,7 +47,7 @@ catJokes = [
   "Where do cats enjoy spending a family day? The mew-seum.",
   "What's a kitten's favorite kind of sticker? Scratch and sniff."
 ]
-//a function that generates a random cat jokes form the array each time a button is pressed
+//a function that generates a random cat joke from the array each time a button is pressed
 function getRandomCatJoke() {
   const randomIndex = Math.floor(Math.random() * catJokes.length);
   return catJokes[randomIndex];
