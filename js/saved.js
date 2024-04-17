@@ -19,7 +19,8 @@ function generateMatchRows(savedCats) {
         const breedDivElement = $(`<div class="col-4 mb-3">Breed: ${cat.breed}</div>`);
         const secondRowDivElement = $(`<div class="row">`);
         const imageDivElement = $(`<div class="col-8 mb-3">`);
-        const aDivElement = $(`<a class="link" href=${cat.image}>Image: ${cat.image}</a>`)
+        const customText = "Click here for your Purr-fect image";
+        const aDivElement = $(`<a class="link" href=${cat.image}>${customText}</a>`)
         const locationDivElement = $(`<div class="col-4 mb-3">Location: ${cat.resident}</div>`);
         const thirdRowDivElement = $(`<div class="row justify-content-between mb-3">`);
         const heartImageElement = $(`<span class="col-1" hidden data-index=${index}>😻</span>`);
