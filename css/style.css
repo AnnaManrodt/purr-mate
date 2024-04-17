@@ -15,7 +15,10 @@ header {
   text-align: center;
 }
 
+#age{
+  width: 100%;
 
+}
 
 /* this is what is keeping  us from centering  */
 /* .headerNavContainer {
@@ -75,6 +78,7 @@ footer {
   max-width: 9%;
   margin-right: 100%;
   border-radius: 50%;
+  margin-right: auto;
 
 }
 
@@ -102,12 +106,8 @@ footer {
     color: #333;
     right: 0;
   }
-
-  .logoImg {
-    margin-right: auto;
     /* Push the logo into the center  */
-  }
-
+  
 
   /* jokes seem to already be in the center */
 /* 
