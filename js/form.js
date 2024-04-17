@@ -69,7 +69,7 @@ function specialNeedsTranslation(special_needs) {
   };
   console.log(special_needs)
   console.log(special_needsTranslationObject[special_needs])
-  return special_needsTranslationObject[special_needs] || null;
+  return special_needsTranslationObject[special_needs] || 0;
 }
 
 function getColorFromNumber(color) {
@@ -104,7 +104,7 @@ function geoRangeTranslation(geoRange) {
     "Less than 250 miles": 250
   };
 
-  return geo_rangeObjects[geoRange] || null;
+  return geo_rangeObjects[geoRange] || "";
 }
 
 function ageTranslation(age) {
@@ -115,7 +115,7 @@ function ageTranslation(age) {
     "Senior": "senior"
   };
   console.log(age)
-  return ageTranslationObject[age] || null;
+  return ageTranslationObject[age] || "";
 }
 
 
@@ -124,10 +124,10 @@ function genderTranslation(gender) {
   const genderTranslationObject = {
     "Female": "f",
     "Male": "m",
-    "I don't care, as long as they are a cat!": null
+    "I don't care, as long as they are a cat!": ""
   };
 
-  return genderTranslationObject[gender] || null;
+  return genderTranslationObject[gender] || "";
 }
 
 
