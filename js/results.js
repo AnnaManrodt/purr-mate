@@ -91,11 +91,10 @@ resultsDivElement.on('click', (event) => {
           }
         })
       }  
-      else { // no favorite array yet so create one
-        favoriteCats = [favoriteCat];
-        localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
-        $(event.target).siblings('span').removeAttr('hidden');
-      }
+    } else { // no favorite array yet so create one
+      favoriteCats = [favoriteCat];
+      localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
+      $(event.target).siblings('span').removeAttr('hidden');
     }
   }
 })
