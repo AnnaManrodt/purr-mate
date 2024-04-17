@@ -1,5 +1,5 @@
 
-//declared varibles gobally so we can use them through out the code
+//declared varibles globally so we can use them throughout the code
 const form = $(".form-group")
 let zipCodeInput = $("#zipCode");
 let translatedNeeds = "";
@@ -29,16 +29,16 @@ $(document).ready(function () {
       alert('Please enter a number with at least 5 digits.');
       // event.preventDefault();
     }
-    //if the form is filled out correct it moves on to this 
+    //if the form is filled out correctly, it moves on to this 
     else {
-      //translated the data from what was inputed into the feild into what the api can actaully read and fetch the things we want it
+      //translated the data from what was inputed into the fieid into what the api can actually read and fetch the things we want
       translatedNeeds = specialNeedsTranslation($("#special_needs").val());
       translatedColor = getColorFromNumber($("#color").val());
       translatedfurType = furTypeTranslation($("#furType").val());
       translatedAge = ageTranslation($("#age").val());
       translatedGeoRange = geoRangeTranslation($("#geoRange").val());
       translatedGender = genderTranslation($("#gender").val());
-      //furType is connected to do you like a clean house 
+      //furType is connected to: do you like a clean house 
     }
     //this object stores all the user data so it can be saved in local and pull out in our results js
     let userInfo = {
