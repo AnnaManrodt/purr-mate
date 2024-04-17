@@ -27,7 +27,7 @@ $(document).ready(function () {
     }
     else if (zipCodeInput.val().length < 5){
       alert('Please enter a number with at least 5 digits.');
-      // event.preventDefault();
+      event.preventDefault();
     }
     //if the form is filled out correctly, it moves on to this 
     else {
