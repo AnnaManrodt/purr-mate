@@ -21,11 +21,11 @@ $(document).ready(function () {
       });
 
     }
-    else if(zipCodeInput.val().length > 5) {
+    else if (zipCodeInput.val().length > 5) {
       alert('Please enter a number with at least 5 digits.');
       // event.preventDefault();
     }
-    else if (zipCodeInput.val().length < 5){
+    else if (zipCodeInput.val().length < 5) {
       alert('Please enter a number with at least 5 digits.');
       event.preventDefault();
     }
