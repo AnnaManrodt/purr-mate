@@ -1,17 +1,10 @@
 function generateMatchRows(savedCats) {
-    console.log('savedCats:', savedCats); // Log the value of savedCats
-    // Your existing code for generating rows goes here
+    console.log('savedCats:', savedCats);
     const resultsDivElement = $('.dataContainer');
-
-    // Creating the elements
     const divContainerElement = $(`<div class="container">`);
 
-
-    // Loop over each saved cat
     savedCats.forEach((cat, index) => {
-        // Creating the elements for each cat
         const divContainerElement = $(`<div class="container">`);
-
         const rowDivElement = $(`<div class="row text-left border">`);
         const firstRowDivElement = $(`<div class="row">`);
         const nameDivElement = $(`<div class = "col-4 mb-3 " style="font-size: 25px; " >Name: ${cat.name} </div>`);
@@ -24,7 +17,6 @@ function generateMatchRows(savedCats) {
         const locationDivElement = $(`<div class="col-4 mb-3">Location: ${cat.resident}</div>`);
         const thirdRowDivElement = $(`<div class="row justify-content-between mb-3">`);
         const heartImageElement = $(`<span class="col-1" hidden data-index=${index}>😻</span>`);
-
         const starRating = $(`<fieldset class="starability-basic">
           <legend>Purr Rating:</legend>
           <input type="radio" id="no-rate-${index}" class="input-no-rate" name="rating-${index}" value="0" checked aria-label="No rating." />
@@ -40,9 +32,8 @@ function generateMatchRows(savedCats) {
           <label for="first-rate5-${index}" title="Amazing">5 stars</label>
       </fieldset>`);
         const deleteButton = $(`<button class="btn btn-outline-danger  delete-button col-1 mb-3 " >Delete</button>`);
-        // Set a custom data attribute to store the index of the saved cat
-        deleteButton.attr('data-index', index);
 
+        deleteButton.attr('data-index', index);
         firstRowDivElement.append(nameDivElement);
         firstRowDivElement.append(genderDivElement);
         firstRowDivElement.append(breedDivElement);
@@ -57,29 +48,25 @@ function generateMatchRows(savedCats) {
         rowDivElement.append(thirdRowDivElement)
         rowDivElement.append(thirdRowDivElement)
         divContainerElement.append(rowDivElement);
-
         resultsDivElement.append(divContainerElement);
 
-        // Event listener for delete button
         deleteButton.on('click', function () {
             const indexToDelete = $(this).data('index');
-            savedCats.splice(indexToDelete, 1); // Remove the cat from the array
-            localStorage.setItem('favoriteCats', JSON.stringify(savedCats)); // Update local storage
-            $(this).closest('.container').remove(); // Remove the container from the UI
+            savedCats.splice(indexToDelete, 1); 
+            localStorage.setItem('favoriteCats', JSON.stringify(savedCats)); 
+            $(this).closest('.container').remove(); 
         });
 
-        // Event listener for star rating
+
         $(`input[name="rating-${index}"]`).on('change', function () {
             console.log("Rating changed:", $(this).val());
             const ratingValue = $(this).val();
-            // Ensure that savedCats[index] exists before updating the rating property
             if (savedCats[index]) {
-                savedCats[index].rating = ratingValue; // Update the rating for the corresponding saved cat
+                savedCats[index].rating = ratingValue; 
                 console.log("Saved cats after rating update:", savedCats);
-                localStorage.setItem('favoriteCats', JSON.stringify(savedCats)); // Update local storage
+                localStorage.setItem('favoriteCats', JSON.stringify(savedCats)); 
                 console.log("Saved cats in local storage:", JSON.parse(localStorage.getItem('favoriteCats')));
             }
-
         });
         function displayRating() {
             savedCats.forEach((cat, index) => {
@@ -87,33 +74,21 @@ function generateMatchRows(savedCats) {
                 $(`input[name="rating-${index}"][value="${ratingValue}"]`).prop('checked', true);
             });
         }
-
-        // Call the function to display the rating
         displayRating();
     });
 }
 
-
-// Load saved cats from local storage
 let savedCats = JSON.parse(localStorage.getItem('favoriteCats')) || [];
-
-// Generate match rows
 generateMatchRows(savedCats);
-
-// fix so it appears once all favorites are deleted. 
 function toggleNoSavedPurrMateMessage() {
     const noSavedPurrMateMessage = document.getElementById('noSavedPurrMateMessage');
-    const contentPresent = document.querySelector('.centered-text'); // Change '.someContentClass' to the appropriate selector
-
+    const contentPresent = document.querySelector('.centered-text'); 
     if (contentPresent) {
-        noSavedPurrMateMessage.style.display = 'none'; // Hide the message
+        noSavedPurrMateMessage.style.display = 'none'; 
     } else {
-        noSavedPurrMateMessage.style.display = 'block'; // Show the message
+        noSavedPurrMateMessage.style.display = 'block'; 
     }
 }
-
-
-
 toggleNoSavedPurrMateMessage();
 
 
