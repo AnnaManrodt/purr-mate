@@ -41,7 +41,7 @@ if (userInfo) {
 
 
 //////////
-// Event Listners
+// Event Listeners
 //////////
 const resultsDivElement = $('.results');
 let favoriteCat = {};
