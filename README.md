@@ -44,11 +44,11 @@ New Technology:
 - Star-Rating System
 
 ## Screenshots
-- Home:![alt text](image.png)
-- Form:![alt text](image-1.png)
-- Results:![alt text](image-2.png)
-- Favorites:![alt text](image-3.png)
-- Giggles:![alt text](image-4.png)
+- ![Home:  ](imgs/homepage.png)
+- ![Form: ](imgs/formpage.png) 
+- ![Results: ](imgs/resultspage.png) 
+-![ Favorites: ](imgs/favoritespage.png) 
+-![ Giggles:](imgs/gigglespage.png)  
 
 ## Links
 - Deployed code on GitHub Pages: [Purr-mate](https://annamanrodt.github.io/purr-mate/)
