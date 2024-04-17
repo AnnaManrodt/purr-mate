@@ -21,13 +21,13 @@ $(document).ready(function () {
       });
 
     }
-    else if(zipCodeInput.val().length > 5){
+    else if(zipCodeInput.val().length > 5 && zipCodeInput.val().length < 5){
       alert('Please enter a number with at least 5 digits.');
-      event.preventDefault();
+      // event.preventDefault();
     }
     else if (zipCodeInput.val().length < 5){
       alert('Please enter a number with at least 5 digits.');
-      event.preventDefault();
+      // event.preventDefault();
     }
     //if the form is filled out correct it moves on to this 
     else {

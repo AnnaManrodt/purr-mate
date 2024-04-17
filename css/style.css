@@ -5,6 +5,7 @@ body {
   font-style: normal;
   min-height: 100vh;
   padding-bottom: 60px;
+  margin: 3%;
 }
 
 
@@ -57,7 +58,7 @@ h1 {
 
 /* this does all the sytling for the footer DO NOT DELETE */
 footer {
-  position: absolute;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -137,7 +138,7 @@ text-align: center ;
 }
 
 #submit{
-  position: fixed;
+  position: relative;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
