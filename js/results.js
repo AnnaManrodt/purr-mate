@@ -80,10 +80,22 @@ resultsDivElement.on('click', (event) => {
         $(event.target).siblings('span').removeAttr('hidden');
         localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
       }
-    } else {
-      favoriteCats = [favoriteCat];
-      localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
-      $(event.target).siblings('span').removeAttr('hidden');
+      else if (favoriteCats.find((cat) => {
+        return JSON.stringify(cat) === JSON.stringify(favoriteCat);
+      })) {// remove favorites if they exist in the favorite array
+        favoriteCats.filter((cat, index, array) => {
+          if (cat.name === favoriteCat.name) {
+            array.splice(index,1);
+            localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
+            $(event.target).siblings('span').attr('hidden', '');
+          }
+        })
+      }  
+      else { // no favorite array yet so create one
+        favoriteCats = [favoriteCat];
+        localStorage.setItem('favoriteCats', JSON.stringify(favoriteCats));
+        $(event.target).siblings('span').removeAttr('hidden');
+      }
     }
   }
 })
@@ -111,7 +123,7 @@ function generateMatchRows(catResults) {
     const aDivElement = $(`<a class="link" href=${catResults[i].large_results_photo_url}>Click here for your Purr-fect image</a>`)
     const locationDivElement = $(`<div class="col-4 mb-3">Location: ${catResults[i].addr_city}, ${catResults[i].addr_state_code}</div>`);
     const thirdRowDivElement = $(`<div class="row justify-content-center mb-3">`);
-    const addToFavButtonElement = $(`<button  type= "button" class="col-2 btn btn-outline-secondary" data-index=${i}>Add to Favorite List</button>`)
+    const addToFavButtonElement = $(`<button  type= "button" class="col-2 btn btn-outline-secondary" data-index=${i}>Add/Remove to Favorite</button>`)
     const heartImageElement = $(`<span class="col-1" hidden data-index=${i}>😻</span>`);
     
     
