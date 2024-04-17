@@ -1,7 +1,7 @@
 
 //declared varibles gobally so we can use them through out the code
 const form = $(".form-group")
-let zipCodeInput = $("#zipCode")
+let zipCodeInput = $("#zipCode");
 let translatedNeeds = "";
 let translatedColor = "";
 let translatedfurType = "";
@@ -21,7 +21,11 @@ $(document).ready(function () {
       });
 
     }
-    else if(zipCodeInput.val().length == 5){
+    else if(zipCodeInput.val().length > 5){
+      alert('Please enter a number with at least 5 digits.');
+      event.preventDefault();
+    }
+    else if (zipCodeInput.val().length < 5){
       alert('Please enter a number with at least 5 digits.');
       event.preventDefault();
     }
