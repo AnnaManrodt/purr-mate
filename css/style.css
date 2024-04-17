@@ -62,11 +62,11 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  max-height: 7%;
+  max-height: 11%; /* Adjust this value as needed */
   background-color: #A7C4A0;
   color: darkolivegreen;
   text-align: center;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 /* this is making each of the cats names large, what daisy was looking for  */
@@ -96,7 +96,7 @@ footer {
 
   #catJokeButton {
     position: fixed;
-    bottom: 10%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
   }
