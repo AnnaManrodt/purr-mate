@@ -42,8 +42,6 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light justify-content-center ">
-
-      <!-- some sytlying such as pushing to the left of the page and changing font size, color, border or something around them? -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -76,8 +74,10 @@ what age group are you looking for? baby young adult senior -->
 
   <main>
     <form class="form-group">
+      <div class="form-group" id="emailLength"
       <label for="email">Email address:</label><br>
       <input type="email" id="email" name="email" required autocomplete="on"><br>
+      </div>
 
       <div class="form-group">
         <label for="special_needs">Do you want a extra specail needy cat?</label>
@@ -88,9 +88,9 @@ what age group are you looking for? baby young adult senior -->
         </select>
       </div>
 
-      <label for="color">What color kitty?</label><br>
-      <!--Form Group:  Options listed -->
+     
       <div class="form-group">
+        <label for="color">What color kitty?</label><br>
         <select class="form-control" id="color" required>
           <option selected>Choose...</option>
           <option>Black & White or Tuxedo</option>
@@ -128,13 +128,11 @@ what age group are you looking for? baby young adult senior -->
       </div>
 
       <!--Form Needs Validation for zip code-->
-      <div class="col-md-3 mb-3 form-group">
+      <div class="form-group">
         <label for="zipCode">Enter your zip code</label>
         <input type="number" class="form-control" id="zipCode" placeholder="5 digit zip code" required>
         <div class="invalid-feedback">
-          Please provide a valid zip.
         </div>
-        <!--Form Group Age - options listed-->
 
         <div class="form-group">
           <label for="age">What age group are you looking for?</label>
@@ -157,8 +155,8 @@ what age group are you looking for? baby young adult senior -->
           </select>
         </div>
 
-
-        <button type="submit" class="btn btn-outline-secondary" id="submit">Submit</button>
+          
+        <button type="submit" class="btn btn-outline-secondary justify-content-center " id="submit">Submit</button>
     </form>
   </main>
   <!-- some styting to get to the bottom and centered -->

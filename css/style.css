@@ -3,20 +3,10 @@ body {
   font-family: "Dekko", cursive;
   font-weight: 300;
   font-style: normal;
-  position: relative;
   min-height: 100vh;
   padding-bottom: 60px;
 }
 
-
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#contentWrap {
-  padding-bottom: 2.5rem
-}
 
 header {
   font-family: "Architects Daughter", cursive;
@@ -27,140 +17,105 @@ header {
 
 
 
-.headerNavContainer {
+/* this is what is keeping  us from centering  */
+/* .headerNavContainer {
   display: flex; 
   align-items: center; 
   justify-content: space-between; 
   padding: 10px 20px; 
-}
-.logoNavContainer {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Align items vertically */
-}
-
-/* .headerNavContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  text-align: center;
 } */
 
-nav ul {
-  list-style-type: none; /* Remove default list styles */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Use flexbox for layout */
-}
+/* not dong anythin gbut we might still want it  */
+/* nav ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+} */
 
-nav ul li {
-  display: inline; /* Display list items horizontally */
-  margin-right: auto; /* Add spacing between list items */
-}
+/* nav ul li {
+  display: inline; 
+  margin-right: auto; 
+} */
 
-.nav-link {
+/* .nav-link {
   color: rgba(0, 0, 0, .55);
-}
+} */
 
-
+/* changes color of the title purr mate  */
 h1 {
   font-size: 36px;
   color: darkolivegreen;
 }
 
-.link {
+/* .link {
   text-decoration: none;
-}
+} */
 
+/* this does all the sytling for the footer DO NOT DELETE */
 footer {
-
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  max-height: 5%;
+  max-height: 7%;
   background-color: #A7C4A0;
   color: darkolivegreen;
   text-align: center;
   padding: 10px 0;
-  /* optional */
 }
 
+/* this is making each of the cats names large, what daisy was looking for  */
 .catName {
   font-size: 1.5rem;
 }
 
-.footer {
-  text-align: center;
-
-}
-
+/* this styles the img */
 .logoImg {
-  max-width: 8%;
+  max-width: 9%;
   margin-right: 100%;
-  border-radius: 50px;
+  border-radius: 50%;
 
 }
 
-.centered-text-container {
+/* .centered-text-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 35vh;
-  /* Adjust this value to control the vertical position */
   font-size: 30px;
-}
+} */
 
-.centered-text {
-  text-align: center;
-}
 
 /* footer needs work */
 
   #catJokeButton {
     position: fixed;
-    bottom: 50px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
   }
-
-  /* .navbar {
-    justify-content: flex-start;
-    margin-left: auto;
-  } */
 
   /* Change font size and color of the navigation links */
   .nav-link {
     font-size: 18px;
     color: #333;
-    /* Change this to your desired color */
+    right: 0;
   }
 
   .logoImg {
     margin-right: auto;
-    /* Push the logo to the left */
+    /* Push the logo into the center  */
   }
 
 
-  /* Add a border around the navigation bar */
-  .mainContentOnMainPage {
-    display: flex;
-    align-items: row;
-    justify-content: center;
-    text-align: center;
-  }
-
+  /* jokes seem to already be in the center */
+/* 
   .jokes {
     text-align: center;
-  }
+  } */
 
-
-  #FilloutFormBtn {
-    color: #333;
-  }
-
-
-/* Add a border around the navigation bar */
+/* cneter main content on the main page */
 .mainContentOnMainPage{
 display: flex;
 align-items: row;
@@ -171,9 +126,19 @@ text-align: center ;
 .jokes{
   text-align: center;
 }
-  .submit {
-    background-color: darkolivegreen;
-    border-color: darkolivegreen;
 
-  }
+.form-group{
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
+#email{
+  width: 100%;
+}
+
+#submit{
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
