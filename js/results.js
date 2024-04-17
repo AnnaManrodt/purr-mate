@@ -120,7 +120,7 @@ function generateMatchRows(catResults) {
     const breedDivElement = $(`<div class="col-4 mb-3">Breed: ${catResults[i].primary_breed}</>`);
     const secondRowDivElement = $(`<div class="row">`);
     const imageDivElement = $(`<div class="col-8 mb-3">`);
-    const aDivElement = $(`<a class="link" href=${catResults[i].large_results_photo_url}>Click here for your Purr-fect image</a>`)
+    const aDivElement = $(`<a class="link" target="_blank" href=${catResults[i].large_results_photo_url}>Click here for your Purr-fect image</a>`)
     const locationDivElement = $(`<div class="col-4 mb-3">Location: ${catResults[i].addr_city}, ${catResults[i].addr_state_code}</div>`);
     const thirdRowDivElement = $(`<div class="row justify-content-center mb-3">`);
     const addToFavButtonElement = $(`<button  type= "button" class="col-2 btn btn-outline-secondary" data-index=${i}>Add/Remove to Favorite</button>`)
