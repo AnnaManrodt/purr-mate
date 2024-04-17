@@ -147,7 +147,7 @@ function generateMatchRows(catResults) {
 function generateNoPetsMessage() {
   const resultsDivElement = $('.results'); 
   const rowDivElement = $(`<div class="row text-left">`)
-  const messageH2Element = $(`<h2>No Purr mate found 😿.  Please enter new search criteria on the Form page.</h2>`);
+  const messageH2Element = $(`<h2 >No Purr mate found 😿.  Please enter new search criteria on the Form page.</h2>`);
   
   rowDivElement.append(messageH2Element);
   resultsDivElement.append(rowDivElement);

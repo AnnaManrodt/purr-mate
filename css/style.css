@@ -147,9 +147,11 @@ text-align: center ;
 
 @media only screen and (max-width: 768px) {
 
-  nav{
+  .nav-link{
     /* width: 1%;
     height: 1%; */
+    display: flex;
+    text-wrap: wrap;
     position: relative;
     z-index: 1;
     top: -10px;
